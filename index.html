@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="tr" class="scroll-smooth">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sound Journey — Music, Development & Meditation</title>
+<title>Sound Journey — Müzik, Gelişim & Meditasyon</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,6 +87,14 @@
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
   }
 
+  /* ORFF SLIDESHOW */
+  .orff-slide {
+    object-position: center;
+  }
+  #orffSlideContainer {
+    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+  }
+
   /* CARD IMAGE CONSISTENCY */
   .card-image-container {
     aspect-ratio: 4 / 3;
@@ -105,27 +113,27 @@
     <a href="#hero" class="font-display text-xl md:text-2xl tracking-wide text-wood">Sound&nbsp;Journey</a>
 
     <ul class="hidden lg:flex items-center gap-9 text-sm tracking-wide text-[#333333]/80">
-      <li><a href="#kids" class="nav-link py-1">Kids</a></li>
-      <li><a href="#development" class="nav-link py-1">Development</a></li>
-      <li><a href="#adults" class="nav-link py-1">Adults</a></li>
-      <li><a href="#events" class="nav-link py-1">Events</a></li>
-      <li><a href="#about" class="nav-link py-1">About</a></li>
+      <li><a href="#kids" class="nav-link py-1">Çocuklar</a></li>
+      <li><a href="#development" class="nav-link py-1">Gelişim</a></li>
+      <li><a href="#adults" class="nav-link py-1">Yetişkinler</a></li>
+      <li><a href="#events" class="nav-link py-1">Etkinlikler</a></li>
+      <li><a href="#about" class="nav-link py-1">Hakkında</a></li>
     </ul>
 
-    <a href="#connect" class="btn-primary hidden md:inline-flex items-center bg-terracotta text-white text-sm px-6 py-2.5 rounded-full tracking-wide">Connect</a>
+    <a href="#connect" class="btn-primary hidden md:inline-flex items-center bg-terracotta text-white text-sm px-6 py-2.5 rounded-full tracking-wide">İletişim</a>
 
-    <button id="menuBtn" class="lg:hidden text-wood" aria-label="Open menu">
+    <button id="menuBtn" class="lg:hidden text-wood" aria-label="Menüyü aç">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </nav>
 
   <div id="mobileMenu" class="lg:hidden hidden flex-col bg-[#F5F2ED] border-t border-[#6F5950]/10 px-6 py-6 gap-5 text-[#333333]/85">
-    <a href="#kids" class="mobile-link py-1">Kids</a>
-    <a href="#development" class="mobile-link py-1">Development</a>
-    <a href="#adults" class="mobile-link py-1">Adults</a>
-    <a href="#events" class="mobile-link py-1">Events</a>
-    <a href="#about" class="mobile-link py-1">About</a>
-    <a href="#connect" class="btn-primary inline-flex justify-center bg-terracotta text-white px-6 py-2.5 rounded-full mt-2">Connect</a>
+    <a href="#kids" class="mobile-link py-1">Çocuklar</a>
+    <a href="#development" class="mobile-link py-1">Gelişim</a>
+    <a href="#adults" class="mobile-link py-1">Yetişkinler</a>
+    <a href="#events" class="mobile-link py-1">Etkinlikler</a>
+    <a href="#about" class="mobile-link py-1">Hakkında</a>
+    <a href="#connect" class="btn-primary inline-flex justify-center bg-terracotta text-white px-6 py-2.5 rounded-full mt-2">İletişim</a>
   </div>
 </header>
 
@@ -133,16 +141,16 @@
 <section id="hero" class="pt-40 pb-24 md:pt-52 md:pb-32 px-6 md:px-10">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-10 items-center">
     <div>
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-6">Orff Method &middot; Sound Meditation &middot; Vocal Coaching</p>
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-6">Orff Metodu &middot; Müzikle Bağ Kurma &middot; Ses Meditasyonu</p>
       <h1 class="font-display text-[2.6rem] leading-[1.12] md:text-6xl md:leading-[1.08] text-[#333333] mb-7">
-        A life spanning three continents, backed by twenty‑five years of musical experience.
+        Üç kıtaya yayılan çeyrek asırlık bir müzik birikimi...
       </h1>
       <p class="text-base md:text-lg text-[#333333]/70 max-w-md mb-10 leading-relaxed">
-        One‑on‑one music sessions for children, gentle sound work for grown‑ups &mdash; rooted in decades of teaching, performing, and listening deeply.
+        Onlarca yıllık eğitim ve sahne deneyiminden süzülen; çocuklar için oyun dolu müzik seansları, yetişkinler içinse derin bir ses ve dinginlik alanı.
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="#connect" class="btn-primary bg-terracotta text-white px-8 py-3.5 rounded-full tracking-wide text-sm">Begin Your Journey</a>
-        <a href="#about" class="btn-ghost border border-wood/30 text-wood px-8 py-3.5 rounded-full tracking-wide text-sm hover:bg-wood hover:text-white">The Story</a>
+        <a href="#connect" class="btn-primary bg-terracotta text-white px-8 py-3.5 rounded-full tracking-wide text-sm">Yolculuğa Başlayın</a>
+        <a href="#about" class="btn-ghost border border-wood/30 text-wood px-8 py-3.5 rounded-full tracking-wide text-sm hover:bg-wood hover:text-white">Hikaye</a>
       </div>
     </div>
 
@@ -151,8 +159,8 @@
       <div id="heroSlideContainer" 
            class="w-full max-w-md relative cursor-zoom-in group overflow-hidden rounded-2xl aspect-[5/4]"
            onclick="openModalFromElement(event, this)">
-        <img src="images/Jar_flute.jpg" alt="Silver flute portrait" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 group-hover:scale-[1.08]">
-        <img src="images/kanun2.jpg" alt="Kanun instrument" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 group-hover:scale-[1.08]">
+        <img src="images/Jar_flute.jpg" alt="Gümüş flüt portresi" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 group-hover:scale-[1.08]">
+        <img src="images/kanun2.jpg" alt="Kanun enstrümanı" class="hero-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 group-hover:scale-[1.08]">
       </div>
     </div>
   </div>
@@ -165,24 +173,28 @@
 <!-- ===================== FEATURE 1: ORFF ===================== -->
 <section id="kids" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
-    <div class="order-2 md:order-1">
-      <div onclick="openModal('images/handpan_deniz.jpg', 'Handpan session')" class="overflow-hidden w-full text-left cursor-zoom-in group relative rounded-2xl">
-        <img src="images/handpan_deniz.jpg" alt="Handpan session" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+    <div class="order-2 md:order-1 flex justify-center">
+      <!-- Orff Slideshow -->
+      <div id="orffSlideContainer" 
+           class="w-full max-w-md relative cursor-zoom-in group overflow-hidden rounded-2xl aspect-[5/4]"
+           onclick="openOrffModalFromElement(event, this)">
+        <img src="images/handpan_deniz.jpg" alt="Handpan seansı" class="orff-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 group-hover:scale-[1.08]">
+        <img src="images/kid2.jpg" alt="Çocuk müzik seansı" class="orff-slide absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 group-hover:scale-[1.08]">
       </div>
     </div>
 
     <div class="order-1 md:order-2">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Ages 4&ndash;13</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">The Orff Approach, one child at a time</h2>
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Yaş 4&ndash;13</p>
+      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Her çocuk için özel bir Orff Yaklaşımı</h2>
       <p class="text-[#333333]/70 leading-relaxed mb-6 max-w-lg">
-        Every lesson is one‑on‑one &mdash; built around your child's own pace, curiosity, and voice. Rhythm, movement, and simple instruments open the door to music the way Orff intended: playful, physical, and personal.
+        Her ders birebir gerçekleştirilir &mdash; çocuğunuzun kendi temposuna, merakına ve sesine göre şekillenir. Ritim, hareket ve basit enstrümanlar müziğin kapısını Orff'un amaçladığı gibi açar: eğlenceli, fiziksel ve kişisel.
       </p>
       <ul class="space-y-3 text-[#333333]/80 mb-8">
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Fully individualized weekly sessions</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Body percussion, mallet instruments &amp; voice</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Confidence built through play, not pressure</li>
+        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Tamamen kişiselleştirilmiş haftalık seanslar</li>
+        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Beden perküsyonu, vurmalı çalgılar ve ses</li>
+        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Baskıyla değil, oyunla kazanılan özgüven</li>
       </ul>
-      <a href="#connect" class="text-wood text-sm tracking-wide border-b border-wood/40 pb-1 hover:border-terracotta hover:text-terracotta transition-colors">Book a trial lesson &rarr;</a>
+      <a href="#connect" class="text-wood text-sm tracking-wide border-b border-wood/40 pb-1 hover:border-terracotta hover:text-terracotta transition-colors">Deneme dersi için yer ayırtın &rarr;</a>
     </div>
   </div>
 </section>
@@ -195,22 +207,22 @@
 <section id="development" class="py-20 md:py-28 px-6 md:px-10 bg-[#FAF7F2]">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
     <div>
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Development with Music</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Supporting speech, attention &amp; expression</h2>
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Müzikle Gelişim</p>
+      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Konuşmayı, dikkati ve ifadeyi desteklemek</h2>
       <p class="text-[#333333]/70 leading-relaxed mb-6 max-w-lg">
-        Music reaches parts of a child's development that words alone can't. Sessions are gently structured to strengthen focus, encourage verbal expression, and build the kind of listening that carries into everyday life.
+        Müzik, bir çocuğun gelişiminde kelimelerin tek başına ulaşamadığı noktalara dokunur. Seanslar odaklanmayı güçlendirmek, sözlü ifadeyi teşvik etmek ve günlük hayata taşınacak dinleme becerisini kazandırmak için özenle yapılandırılmıştır.
       </p>
       <ul class="space-y-3 text-[#333333]/80 mb-8">
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Attention &amp; focus, built through call-and-response</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Speech &amp; articulation woven into song</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Emotional expression through improvisation</li>
+        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Soru-cevap yoluyla geliştirilen dikkat ve odaklanma</li>
+        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Şarkılarla örülen konuşma ve artikülasyon</li>
+        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Doğaçlama yoluyla duygusal ifade</li>
       </ul>
-      <a href="#connect" class="text-wood text-sm tracking-wide border-b border-wood/40 pb-1 hover:border-terracotta hover:text-terracotta transition-colors">Ask about a first session &rarr;</a>
+      <a href="#connect" class="text-wood text-sm tracking-wide border-b border-wood/40 pb-1 hover:border-terracotta hover:text-terracotta transition-colors">İlk seans hakkında bilgi alın &rarr;</a>
     </div>
 
     <div>
-      <div onclick="openModal('images/childdev1.jpg', 'Child development music session')" class="overflow-hidden w-full text-left cursor-zoom-in group relative rounded-2xl">
-        <img src="images/childdev1.jpg" alt="Child development music session" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+      <div onclick="openModal('images/childdev1.jpg', 'Çocuk gelişim müzik seansı')" class="overflow-hidden w-full text-left cursor-zoom-in group relative rounded-2xl">
+        <img src="images/childdev1.jpg" alt="Çocuk gelişim müzik seansı" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
       </div>
     </div>
   </div>
@@ -220,10 +232,10 @@
 <section id="adults" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-7xl mx-auto">
     <div class="max-w-2xl mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Youngs &amp; Adults</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">A sustainable connection to sound</h2>
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Gençler ve Yetişkinler</p>
+      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Sése giden sürdürülebilir bir yol</h2>
       <p class="text-[#333333]/70 leading-relaxed text-lg">
-        For adults carrying full lives and full calendars, sound work offers a way back to the body. Sessions blend sound meditation, breathwork, and vocal coaching &mdash; practices you can return to on your own.
+        Gündelik hayatın koşturmacası içinde, eskilerin o uzak ve kalıplaşmış müzik derslerini unutun. Gençler ve yetişkinler için tasarlanan bu yolculuk; ister bir enstrümanla ritminizi bulmanız, ister sesinizi özgürleştirmeniz, isterse de ses meditasyonuyla dinginleşmeniz için size alan açar.
       </p>
     </div>
 
@@ -231,34 +243,34 @@
       
       <!-- Card 1 -->
       <div class="bg-[#FAF7F2] p-8 rounded-2xl border border-[#333333]/5 flex flex-col">
-        <div onclick="openModal('images/volkanun.jpg', 'Connect with an instrument')" class="mb-6 overflow-hidden w-full text-left cursor-zoom-in group relative card-image-container rounded-2xl">
-          <img src="images/volkanun.jpg" alt="Connect with an instrument" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openModal('images/volkanun.jpg', 'Bir enstrümanla bağ kurun')" class="mb-6 overflow-hidden w-full text-left cursor-zoom-in group relative card-image-container rounded-2xl">
+          <img src="images/volkanun.jpg" alt="Bir enstrümanla bağ kurun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         </div>
-        <h3 class="font-display text-2xl text-[#333333] mb-3">Connect with an instrument</h3>
+        <h3 class="font-display text-2xl text-[#333333] mb-3">Enstrümanla bağ kurun</h3>
         <p class="text-[#333333]/70 text-sm leading-relaxed mb-6 flex-grow">
-          Explore intuitive instruments to build your own personal rhythm and expression through direct tactile experience.
+          Doğrudan dokunsal deneyim yoluyla kendi kişisel ritminizi ve ifadenizi oluşturmak için sezgisel enstrümanları keşfedin.
         </p>
       </div>
 
-      <!-- Card 2 - Middle card (was smaller) -->
+      <!-- Card 2 -->
       <div class="bg-[#FAF7F2] p-8 rounded-2xl border border-[#333333]/5 flex flex-col">
-        <div onclick="openModal('images/singv.jpg', 'Connect with your voice')" class="mb-6 overflow-hidden w-full text-left cursor-zoom-in group relative card-image-container rounded-2xl">
-          <img src="images/singv.jpg" alt="Connect with your voice" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openModal('images/singv.jpg', 'Sesinizle bağ kurun')" class="mb-6 overflow-hidden w-full text-left cursor-zoom-in group relative card-image-container rounded-2xl">
+          <img src="images/singv.jpg" alt="Sesinizle bağ kurun" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         </div>
-        <h3 class="font-display text-2xl text-[#333333] mb-3">Connect with your voice</h3>
+        <h3 class="font-display text-2xl text-[#333333] mb-3">Sesinizle bağ kurun</h3>
         <p class="text-[#333333]/70 text-sm leading-relaxed mb-6 flex-grow">
-          One-on-one coaching to free the voice &mdash; for speaking, singing, or simply being heard with confidence.
+          Konuşmak, şarkı söylemek veya sadece özgüvenle duyulmak için sesi özgürleştiren birebir koçluk.
         </p>
       </div>
 
       <!-- Card 3 -->
       <div class="bg-[#FAF7F2] p-8 rounded-2xl border border-[#333333]/5 flex flex-col">
-        <div onclick="openModal('images/yuva.jpg', 'Sound meditation')" class="mb-6 overflow-hidden w-full text-left cursor-zoom-in group relative card-image-container rounded-2xl">
-          <img src="images/yuva.jpg" alt="Sound meditation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+        <div onclick="openModal('images/yuva.jpg', 'Ses meditasyonu')" class="mb-6 overflow-hidden w-full text-left cursor-zoom-in group relative card-image-container rounded-2xl">
+          <img src="images/yuva.jpg" alt="Ses meditasyonu" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
         </div>
-        <h3 class="font-display text-2xl text-[#333333] mb-3">Sound meditation</h3>
+        <h3 class="font-display text-2xl text-[#333333] mb-3">Ses meditasyonu</h3>
         <p class="text-[#333333]/70 text-sm leading-relaxed mb-6 flex-grow">
-          Immersive sessions using voice and resonant instruments to slow the nervous system down and restore inner balance.
+          Sinir sistemini yavaşlatmak ve içsel dengeyi yeniden kurmak için insan sesi ve rezonanslı enstrümanların kullanıldığı sürükleyici seanslar.
         </p>
       </div>
 
@@ -269,22 +281,27 @@
 <!-- ===================== ABOUT ===================== -->
 <section id="about" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-7xl mx-auto">
-    <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5 text-center">The Story</p>
-    <h2 class="font-display text-4xl md:text-5xl leading-tight text-[#333333] mb-16 text-center max-w-3xl mx-auto">Three continents, one thread of sound</h2>
+    <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5 text-center">Hikaye</p>
 
     <div class="grid md:grid-cols-2 gap-14 items-start">
-      <div onclick="openModal('images/studio.jpg', 'Studio')" class="overflow-hidden w-full text-left cursor-zoom-in group relative rounded-2xl">
-        <img src="images/studio.jpg" alt="Studio" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+      <div onclick="openModal('images/hikaye.jpeg', 'Hikaye')" class="overflow-hidden w-full text-left cursor-zoom-in group relative rounded-2xl">
+        <img src="images/hikaye.jpeg" alt="Hikaye" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
       </div>
-      <div class="pt-4">
-        <p class="text-[#333333]/75 leading-relaxed mb-5">
-          Twenty‑five years ago, music was simply the thing that made sense when nothing else did. Since then, that thread has run through three continents &mdash; conservatories, community halls, and quiet living rooms &mdash; each place teaching something the last one couldn't.
+      <div class="pt-4 space-y-5 text-[#333333]/75 leading-relaxed">
+        <p>
+          Sizi bilmem ama hayat bana çocukluğumda müzik konusunda pek cömert davranmadı. Etrafımda müzik aşkı olan veya sevgiyle enstrüman çalan kimse yoktu; okuldaki müzik dersleri ise müziği sevdirmekten çok ondan uzaklaştıran talihsiz deneyimlerdi.
         </p>
-        <p class="text-[#333333]/75 leading-relaxed mb-5">
-          What stayed constant was the belief that sound is not a performance, but a relationship. With children, that means meeting them exactly where they are. With adults, it means making space to simply feel again.
+        <p>
+          ODTÜ yıllarımda hayat karşıma müziği içtenlikle seven insanları çıkardı. Elimden tuttular, sevgilerini paylaştılar ve yan flüt hayatıma girdi. Sanki yıllardır içimde bekleyen bir parçam o gün kendine ifade alanı buldu.
         </p>
-        <p class="text-[#333333]/75 leading-relaxed">
-          Today, that same attention shapes every session &mdash; whether it's a first mallet lesson with a four‑year‑old, or a sound bath for a room full of tired professionals.
+        <p>
+          Aradan geçen yirmi beş yıl boyunca topluluk odalarından konser salonlarına, üç kıtaya yayılan bu yolculuk; uzun yıllar Avustralya ve Hollanda dahil farklı kültürler içinde sürdürdüğüm başarılı bir mühendislik kariyeriyle harmanlandı. Farklı dünyaları ve insanları tanımak hayatıma derinlik katarken, bir süredir tüm bu birikim ve hayat enerjim tamamen müzik, ses ve meditasyon alanlarında akıyor. Bugün o farklı coğrafyalardan süzülen vizyon, özellikle çocuklarla kurduğum bağda onlara geniş bir alan açmam için bana en büyük rehber oluyor.
+        </p>
+        <p>
+          En büyük heyecanım; müziğin çocukların dünyasında kelimelerin ötesine geçerek yarattığı o özgür alanı görmek ve sesin gelişimlerindeki mucizevi gücüne eşlik etmek. Öte yandan, içinden "keşke ben de bir enstrüman çalabilseydim" diyen yetişkinlere de o uzun zamandır aradıkları alanı açıyorum.
+        </p>
+        <p>
+          Çocuk ya da yetişkin fark etmez; müzikle ve sesle bağ kurmak düşünülen kadar zor değil ve bunun kesinlikle bir yaşı yok. Sizi de bu yolculuklara davet ediyorum.
         </p>
       </div>
     </div>
@@ -299,41 +316,41 @@
 <section id="connect" class="py-20 md:py-28 px-6 md:px-10 bg-wood">
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-12">
-      <p class="text-[#F5F2ED]/70 text-sm tracking-[0.2em] uppercase mb-5">Get Started</p>
-      <h2 class="font-display text-4xl md:text-5xl leading-tight text-white mb-5">Tailored Sound Journey Assessment</h2>
+      <p class="text-[#F5F2ED]/70 text-sm tracking-[0.2em] uppercase mb-5">Başlayın</p>
+      <h2 class="font-display text-4xl md:text-5xl leading-tight text-white mb-5">Özel Ses Yolculuğu Değerlendirmesi</h2>
       <p class="text-[#F5F2ED]/70 max-w-xl mx-auto leading-relaxed">
-        A few thoughtful questions help shape a path that's actually right for you or your child. Every submission is read personally &mdash; no forms, no assistants, just a real reply.
+        Birkaç düşünceli soru, sizin veya çocuğunuz için doğru olan yolu şekillendirmeye yardımcı olur. Her başvuru bizzat okunur &mdash; formlar veya asistanlar yok, sadece gerçek bir yanıt var.
       </p>
     </div>
 
     <form class="bg-[#F5F2ED] rounded-3xl p-8 md:p-12 grid gap-6" onsubmit="event.preventDefault();">
       <div class="grid md:grid-cols-2 gap-6">
         <div>
-          <label for="name" class="block text-sm text-wood mb-2">Name</label>
-          <input id="name" type="text" placeholder="Your name" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors">
+          <label for="name" class="block text-sm text-wood mb-2">İsim</label>
+          <input id="name" type="text" placeholder="Adınız" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors">
         </div>
         <div>
-          <label for="email" class="block text-sm text-wood mb-2">Email</label>
-          <input id="email" type="email" placeholder="you@email.com" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors">
+          <label for="email" class="block text-sm text-wood mb-2">E-posta</label>
+          <input id="email" type="email" placeholder="eposta@adresiniz.com" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors">
         </div>
       </div>
 
       <div>
-        <label for="connection" class="block text-sm text-wood mb-2">Tell me about your current connection with sound/music</label>
-        <textarea id="connection" rows="3" placeholder="A little about where you are today&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
+        <label for="connection" class="block text-sm text-wood mb-2">Müzik ve sesle olan mevcut bağınızdan bahseder misiniz?</label>
+        <textarea id="connection" rows="3" placeholder="Bugün nerede olduğunuz hakkında biraz bilgi&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
       </div>
 
       <div>
-        <label for="goal" class="block text-sm text-wood mb-2">What is your main goal?</label>
-        <textarea id="goal" rows="3" placeholder="What you're hoping to move toward&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
+        <label for="goal" class="block text-sm text-wood mb-2">Temel hedefiniz nedir?</label>
+        <textarea id="goal" rows="3" placeholder="Ulaşmak istediğiniz nokta&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
       </div>
 
       <div class="flex items-start gap-3 text-xs text-wood/70 -mt-1">
         <svg class="w-4 h-4 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
-        <p>Every assessment is reviewed personally by the founder &mdash; you'll hear back within 2&ndash;3 days with thoughts and next steps.</p>
+        <p>Her değerlendirme bizzat kurucu tarafından incelenir &mdash; düşünceler ve sonraki adımlarla ilgili 2&ndash;3 gün içinde geri dönüş alırsınız.</p>
       </div>
 
-      <button type="submit" class="btn-primary bg-terracotta text-white rounded-full py-4 tracking-wide text-sm mt-2">Submit My Assessment</button>
+      <button type="submit" class="btn-primary bg-terracotta text-white rounded-full py-4 tracking-wide text-sm mt-2">Değerlendirmemi Gönder</button>
     </form>
   </div>
 </section>
@@ -342,9 +359,9 @@
 <footer class="py-14 px-6 md:px-10 border-t border-wood/10">
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#333333]/55">
     <p class="font-display text-lg text-wood">Sound&nbsp;Journey</p>
-    <p>&copy; 2026 Sound Journey. All rights reserved.</p>
+    <p>&copy; 2026 Sound Journey. Tüm hakları saklıdır.</p>
     <div class="flex gap-6">
-      <a href="#hero" class="hover:text-terracotta transition-colors">Back to top</a>
+      <a href="#hero" class="hover:text-terracotta transition-colors">Başa dön</a>
     </div>
   </div>
 </footer>
@@ -353,24 +370,29 @@
 <div id="imageModal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-4 transition-opacity opacity-0 duration-300">
   <div class="relative max-w-5xl max-h-[90vh] w-full flex items-center justify-center" onclick="event.stopPropagation()">
     <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-terracotta text-lg font-medium px-3 py-1 flex items-center gap-1 transition-colors">
-      <span>Close</span> &times;
+      <span>Kapat</span> &times;
     </button>
-    <img id="modalImg" src="" alt="Enlarged view" class="max-h-[85vh] max-w-full object-contain rounded-xl shadow-2xl bg-white/5">
+    <img id="modalImg" src="" alt="Büyütülmüş görünüm" class="max-h-[85vh] max-w-full object-contain rounded-xl shadow-2xl bg-white/5">
   </div>
 </div>
 
 <script>
   let heroInterval;
   let currentHeroSlide = 0;
-  const slides = document.querySelectorAll('.hero-slide');
+  const heroSlides = document.querySelectorAll('.hero-slide');
+
+  let orffInterval;
+  let currentOrffSlide = 0;
+  const orffSlides = document.querySelectorAll('.orff-slide');
+
   let isModalOpen = false;
 
   function startHeroSlideshow() {
-    if (slides.length > 0 && !heroInterval && !isModalOpen) {
+    if (heroSlides.length > 0 && !heroInterval && !isModalOpen) {
       heroInterval = setInterval(() => {
-        slides[currentHeroSlide].style.opacity = '0';
-        currentHeroSlide = (currentHeroSlide + 1) % slides.length;
-        slides[currentHeroSlide].style.opacity = '1';
+        heroSlides[currentHeroSlide].style.opacity = '0';
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        heroSlides[currentHeroSlide].style.opacity = '1';
       }, 3000);
     }
   }
@@ -380,9 +402,30 @@
     heroInterval = null;
   }
 
+  function startOrffSlideshow() {
+    if (orffSlides.length > 0 && !orffInterval && !isModalOpen) {
+      orffInterval = setInterval(() => {
+        orffSlides[currentOrffSlide].style.opacity = '0';
+        currentOrffSlide = (currentOrffSlide + 1) % orffSlides.length;
+        orffSlides[currentOrffSlide].style.opacity = '1';
+      }, 3000);
+    }
+  }
+
+  function stopOrffSlideshow() {
+    clearInterval(orffInterval);
+    orffInterval = null;
+  }
+
   function openModalFromElement(event, el) {
     event.stopPropagation();
     const activeImg = el.querySelectorAll('.hero-slide')[currentHeroSlide];
+    if (activeImg) openModal(activeImg.src, activeImg.alt);
+  }
+
+  function openOrffModalFromElement(event, el) {
+    event.stopPropagation();
+    const activeImg = el.querySelectorAll('.orff-slide')[currentOrffSlide];
     if (activeImg) openModal(activeImg.src, activeImg.alt);
   }
 
@@ -392,16 +435,18 @@
         img.style.cursor = 'zoom-in';
         img.addEventListener('click', function(e) {
           e.stopPropagation();
-          openModal(img.src, img.alt || 'Page image');
+          openModal(img.src, img.alt || 'Sayfa görseli');
         });
       }
     });
     startHeroSlideshow();
+    startOrffSlideshow();
   });
 
   function openModal(src, altText) {
     isModalOpen = true;
     stopHeroSlideshow();
+    stopOrffSlideshow();
     const modal = document.getElementById('imageModal');
     const modalImg = document.getElementById('modalImg');
     modalImg.src = src;
@@ -421,6 +466,7 @@
       modal.classList.add('hidden');
       document.body.style.overflow = 'auto';
       startHeroSlideshow();
+      startOrffSlideshow();
     }, 300);
   }
 
