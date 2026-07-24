@@ -7,7 +7,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --beige:#F5F2ED;
@@ -23,7 +23,7 @@
     color:var(--charcoal);
     font-family:'Work Sans', sans-serif;
   }
-  .font-display{font-family:'Fraunces', serif;}
+  .font-display{font-family:'Cormorant Garamond', serif;}
   .text-terracotta{color:var(--terracotta);}
   .bg-terracotta{background-color:var(--terracotta);}
   .bg-terracotta-deep{background-color:var(--terracotta-deep);}
@@ -97,13 +97,14 @@
 
     <ul class="hidden lg:flex items-center gap-9 text-sm tracking-wide text-[#333333]/80">
       <li><a href="#kids" class="nav-link py-1">Oyunla Müzik</a></li>
-      <li><a href="#philosophy" class="nav-link py-1">Neden Farklıyız?</a></li>
+      <li><a href="#philosophy" class="nav-link py-1">Metodoloji Farkı</a></li>
       <li><a href="#development" class="nav-link py-1">Gelişimsel Destek</a></li>
+      <li><a href="#faq" class="nav-link py-1">SSS</a></li>
       <li><a href="#testimonials" class="nav-link py-1">Veli Yorumları</a></li>
-      <li><a href="#about" class="nav-link py-1">Hikaye & Eğitim</a></li>
+      <li><a href="#about" class="nav-link py-1">Eğitim ve Hikayemiz</a></li>
     </ul>
 
-    <a href="#connect" class="btn-primary hidden md:inline-flex items-center bg-terracotta text-white text-sm px-6 py-2.5 rounded-full tracking-wide">İletişim & Değerlendirme</a>
+    <a href="#connect" class="btn-primary hidden md:inline-flex items-center bg-terracotta text-white text-sm px-6 py-2.5 rounded-full tracking-wide">Bize Ulaşın</a>
 
     <button id="menuBtn" class="lg:hidden text-wood" aria-label="Menüyü aç">
       <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -112,11 +113,12 @@
 
   <div id="mobileMenu" class="lg:hidden hidden flex-col bg-[#F5F2ED] border-t border-[#6F5950]/10 px-6 py-6 gap-5 text-[#333333]/85">
     <a href="#kids" class="mobile-link py-1">Oyunla Müzik</a>
-    <a href="#philosophy" class="mobile-link py-1">Neden Farklıyız?</a>
+    <a href="#philosophy" class="mobile-link py-1">Metodoloji Farkı</a>
     <a href="#development" class="mobile-link py-1">Gelişimsel Destek</a>
+    <a href="#faq" class="mobile-link py-1">SSS</a>
     <a href="#testimonials" class="mobile-link py-1">Veli Yorumları</a>
-    <a href="#about" class="mobile-link py-1">Hikaye & Eğitim</a>
-    <a href="#connect" class="btn-primary inline-flex justify-center bg-terracotta text-white px-6 py-2.5 rounded-full mt-2">İletişim & Değerlendirme</a>
+    <a href="#about" class="mobile-link py-1">Eğitim ve Hikayemiz</a>
+    <a href="#connect" class="btn-primary inline-flex justify-center bg-terracotta text-white px-6 py-2.5 rounded-full mt-2">Bize Ulaşın</a>
   </div>
 </header>
 
@@ -124,15 +126,21 @@
 <section id="hero" class="pt-40 pb-24 md:pt-52 md:pb-32 px-6 md:px-10">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-10 items-center">
     <div>
-      <h1 class="font-display text-[2.6rem] leading-[1.12] md:text-6xl md:leading-[1.08] text-[#333333] mb-7">
+      <h1 class="font-display text-[2.8rem] leading-[1.12] md:text-6xl md:leading-[1.08] text-[#333333] mb-7">
         Müziğin neşesiyle büyüyen, odaklanan ve özgüvenle kendilerini ifade eden çocuklar...
       </h1>
       <p class="text-base md:text-lg text-[#333333]/70 max-w-md mb-10 leading-relaxed">
         Çeyrek asırlık birikimle; her çocuğun kendi benzersiz temposunda, oyun ve ritimle odaklandığı, içindeki potansiyeli keşfederek müzikle ömür boyu sürecek bir bağ kurduğu birebir seanslar.
       </p>
-      <div class="flex flex-wrap gap-4">
-        <a href="#connect" class="btn-primary bg-terracotta text-white px-8 py-3.5 rounded-full tracking-wide text-sm">Deneme Dersi / Değerlendirme</a>
-        <a href="#about" class="btn-ghost border border-wood/30 text-wood px-8 py-3.5 rounded-full tracking-wide text-sm hover:bg-wood hover:text-white">Hikayemiz</a>
+      
+      <!-- Navigasyon Butonları -->
+      <div class="flex flex-wrap gap-3">
+        <a href="#kids" class="btn-primary bg-terracotta text-white px-5 py-2.5 rounded-full tracking-wide text-xs md:text-sm">Oyunla Müzik</a>
+        <a href="#philosophy" class="btn-ghost border border-wood/30 text-wood px-5 py-2.5 rounded-full tracking-wide text-xs md:text-sm hover:bg-wood hover:text-white">Metodoloji farkı</a>
+        <a href="#development" class="btn-ghost border border-wood/30 text-wood px-5 py-2.5 rounded-full tracking-wide text-xs md:text-sm hover:bg-wood hover:text-white">Gelişimsel destek</a>
+        <a href="#faq" class="btn-ghost border border-wood/30 text-wood px-5 py-2.5 rounded-full tracking-wide text-xs md:text-sm hover:bg-wood hover:text-white">S.S.S.</a>
+        <a href="#testimonials" class="btn-ghost border border-wood/30 text-wood px-5 py-2.5 rounded-full tracking-wide text-xs md:text-sm hover:bg-wood hover:text-white">Veli yorumları</a>
+        <a href="#about" class="btn-ghost border border-wood/30 text-wood px-5 py-2.5 rounded-full tracking-wide text-xs md:text-sm hover:bg-wood hover:text-white">Eğitim ve Hikayemiz</a>
       </div>
     </div>
 
@@ -164,7 +172,7 @@
     </div>
 
     <div class="order-1 md:order-2">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Yaş 4&ndash;13 &middot; Birebir ve Özel Yaklaşım</p>
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Yaş 3&ndash;13 &middot; Birebir ve Özel Yaklaşım</p>
       <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Orff Yaklaşımı İle Birebir Müzik Seansları</h2>
       <p class="text-[#333333]/70 leading-relaxed mb-6 max-w-lg">
         Her seans tamamen birebir gerçekleştirilir — çocuğunuzun kendi temposuna, dikkat süresine, merakına ve sesine göre şekillenir. Ritim, hareket, özel enstrümanlar ve emprovizasyon müziğin kapısını Orff'un amaçladığı gibi açar: eğlenceli ve tamamen kişisel.
@@ -183,44 +191,42 @@
 </svg>
 
 <!-- ===================== NEDEN FARKIYIZ? ===================== -->
-<section id="philosophy" class="py-20 md:py-28 px-6 md:px-10 bg-[#FAF7F2]">
+<section id="philosophy" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/50">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Metodoloji Farkı</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Standart müzik dersleri neden sıklıkla yetersiz kalır?</h2>
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Metodoloji & Yaklaşım Farkı</p>
+      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Geleneksel müzik eğitimi neden her çocuk için doğru başlangıç değildir?</h2>
       <p class="text-[#333333]/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-        Çoğu geleneksel kurs; erken yaşta ezbere dayalı nota öğretimi, tek tip enstrüman zorunluluğu ve performans baskısıyla çocukları müzikten soğutur. Oysa gerçek müzik eğitimi bir zorunluluk değil, keşfedilmeyi bekleyen neşeli bir yolculuktur.
+        Standard müzik metotları başarısız oldukları için değil; genellikle 13 yaş ve üzeri bireylerin bilişsel dünyasına göre tasarlandıkları için erken yaş grubunda eksik kalır. Oysa 3&ndash;13 yaş arası çocuklar için enstrüman seçimi, oyun ve serbest yaratıcı alan hayati önem taşır.
       </p>
     </div>
 
     <div class="grid md:grid-cols-2 gap-8 mb-16">
       <!-- Standart Yaklaşım -->
-      <div class="bg-white p-8 rounded-2xl border border-[#333333]/5 shadow-sm">
-        <div class="text-terracotta font-display text-xl mb-4">Geleneksel / Standart Kurslar</div>
+      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
+        <div class="text-terracotta font-display text-xl mb-4">Geleneksel / Standart Metotların Sınırları</div>
         <ul class="space-y-4 text-[#333333]/75 text-sm md:text-base">
-          <li class="flex gap-3"><span class="text-red-400 font-bold shrink-0">&times;</span> Genellikle çocukların ancak okuma yazma öğrendikten sonra başlayabileceği soyut nota sistemleri</li>
-          <li class="flex gap-3"><span class="text-red-400 font-bold shrink-0">&times;</span> Ezberci, esnemeyen ve sıkıcı teorik kalıplar</li>
-          <li class="flex gap-3"><span class="text-red-400 font-bold shrink-0">&times;</span> Her çocuğun aynı standart metodun dayatılması</li>
-          <li class="flex gap-3"><span class="text-red-400 font-bold shrink-0">&times;</span> Başarıyı sadece nota okumaya indirgeyen sistem</li>
+          <li class="flex gap-3"><span class="text-wood font-bold shrink-0">&bull;</span> 13 yaş ve üzeri soyut düşünce dönemine göre tasarlandığı için erken yaşta ezbere ve nota okumaya dayalıdır.</li>
+          <li class="flex gap-3"><span class="text-wood font-bold shrink-0">&bull;</span> Tek tip enstrüman zorunluluğu getirir; çocukların kendi seslerini ve bedenlerini keşfetme alanını daraltır.</li>
+          <li class="flex gap-3"><span class="text-wood font-bold shrink-0">&bull;</span> Performans baskısı yaratarak çocukları erken yaşta müzikten soğutma riski taşır.</li>
         </ul>
       </div>
 
       <!-- Ses Yolculukları Yaklaşımı -->
-      <div class="bg-wood text-[#F5F2ED] p-8 rounded-2xl shadow-md">
-        <div class="text-terracotta font-display text-xl mb-4">Ses Yolculukları & Orff Yaklaşımı</div>
-        <ul class="space-y-4 text-[#F5F2ED]/90 text-sm md:text-base">
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> Oyun çağındaki çocukların doğal öğrenme dünyasına hitap eden somut ve sezgisel deneyimler</li>
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> Oyun, ritim, beden perküsyonu ve doğaçlama</li>
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> Çocuğun kendi benzersiz temposuna ve yaşına tam uyum</li>
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> Müzikle ömür boyu sürecek içsel ve neşeli bir bağ</li>
+      <div class="bg-[#EDE6D9] text-[#333333] p-8 rounded-2xl border border-[#6F5950]/20 shadow-md">
+        <div class="text-terracotta-deep font-display text-xl mb-4">Ses Yolculukları & Orff Yaklaşımı</div>
+        <ul class="space-y-4 text-[#333333]/90 text-sm md:text-base">
+          <li class="flex gap-3"><span class="text-terracotta-deep font-bold shrink-0">&#10003;</span> Tamamen 3&ndash;13 yaş aralığının somut öğrenme dünyasına, dikkat süresine ve oyun ihtiyacına göre tasarlanmıştır.</li>
+          <li class="flex gap-3"><span class="text-terracotta-deep font-bold shrink-0">&#10003;</span> Doğru enstrüman seçimi, beden perküsyonu ve serbest yaratıcı (emprovizasyon) alan sağlar.</li>
+          <li class="flex gap-3"><span class="text-terracotta-deep font-bold shrink-0">&#10003;</span> Çocuğun içindeki potansiyeli baskılamadan, müzikle ömür boyu sürecek içsel ve neşeli bir bağ kurar.</li>
         </ul>
       </div>
     </div>
 
-    <div class="bg-white p-8 md:p-12 rounded-2xl border border-[#333333]/5 text-center shadow-sm">
+    <div class="bg-white p-8 md:p-12 rounded-2xl border border-[#6F5950]/10 text-center shadow-sm">
       <h3 class="font-display text-2xl md:text-3xl text-[#333333] mb-4">Sıradan Bir Kurs Değil, Her Çocuğun Kendi Ses Yolculuğu</h3>
       <p class="text-[#333333]/70 leading-relaxed max-w-2xl mx-auto mb-8">
-        Burada çocuğunuz bir enstrümanı "icra etmeye" zorlanmaz; aksine kendi ritmini keşfeder, bu iş için tasarlanmış enstrümanlarla sesle oynamayı öğrenir ve bu süreçte bilişsel olarak güçlenir. Çeyrek asırlık müzik birikimiyle tasarlanan bu birebir seanslarda amaç performans değil, çocuğun bütünsel gelişimdir. Çocuğunuzun küçük yaşta katılacağı birkaç seans dahi hayatı boyunca müzik ve işitsel estetikle güçlü bir bağa sahip olmasının kapısını açacaktır.
+        Biz geleneksel müzik eğitimini reddetmiyoruz; aksine onun ergenlik ve yetişkinlik dönemi için ne kadar değerli olduğunu biliyoruz. Ancak erken çocukluk ve gelişim çağındaki çocukların bambaşka bir öğrenme diline ihtiyacı var. Ses Yolculukları; geleneksel metodun bu yaş grubunda açık bıraktığı alanları; doğru enstrüman seçimi, oyunun gücü ve özgür yaratıcı alanla doldurarak çocukların müziği ezberlemesini değil, bizzat hissetmesini sağlar.
       </p>
       <div class="flex flex-wrap justify-center gap-4">
         <a href="#connect" class="btn-primary inline-block bg-terracotta text-white px-8 py-3.5 rounded-full text-sm tracking-wide">Çocuğunuz için deneme seansı</a>
@@ -259,27 +265,109 @@
   </div>
 </section>
 
+<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
+  <path d="M0,30 C150,-10 300,70 450,30 C600,-10 750,70 900,30 C1000,5 1100,55 1200,30"/>
+</svg>
+
+<!-- ===================== SIKÇA SORULAN SORULAR (SSS) ===================== -->
+<section id="faq" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/50">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Merak Edilenler</p>
+      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333]">Sıkça Sorulan Sorular</h2>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Soru 1 -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
+        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">1. Çocuğumun daha önce hiç müzik eğitimi veya enstrüman deneyimi yok, bu durum bir dezavantaj mı?</h3>
+        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
+          Kesinlikle hayır. Aksine, geleneksel kurallarla henüz tanışmamış olmak çocuk için büyük bir avantajdır. Ses Yolculukları'nda kullandığımız Orff yaklaşımı, önceden bir bilgi veya beceri gerektirmez; çocukların içindeki doğal ritmi ve merakı oyun yoluyla uyandırmayı hedefler.
+        </p>
+      </div>
+
+      <!-- Soru 2 -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
+        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">2. Seanslar hangi yaş aralığındaki çocukları kapsıyor ve grup seansları mı yoksa birebir mi yapılıyor?</h3>
+        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
+          Seanslarımız <strong>3 ile 13 yaş</strong> arasındaki çocuklara yönelik olarak tasarlanmıştır. Verimliliği ve çocuğun kendi temposuna tam uyum sağlanabilmesini önemsediğimiz için çalışmalar tamamen <strong>birebir</strong> olarak gerçekleştirilir.
+        </p>
+      </div>
+
+      <!-- Soru 3 -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
+        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">3. Geleneksel enstrüman kurslarından (piyano, keman vb.) farkınız tam olarak nedir?</h3>
+        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
+          Klasik kurslar genellikle nota ezberletme ve teknik baskı üzerine kuruludur. Erken yaş grubundaki çocukların somut öğrenme dünyasına ağır gelebilir. Biz ise çocukların doğru enstrümanı seçmesini, beden perküsyonunu, doğaçlamayı ve oyunun gücünü kullanarak müzikle içsel ve neşeli bir bağ kurmasını sağlıyoruz.
+        </p>
+      </div>
+
+      <!-- Soru 4 -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
+        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">4. Dikkat dağınıklığı veya kendini ifade etmekte zorlanan çocuklar için bu seanslar nasıl bir katkı sunar?</h3>
+        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
+          Müzik ve ritim, kelimelerin ötesine geçerek çocukların duygularını güvenle dışa vurması için eşsiz bir alan yaratır. Soru-cevap ritim oyunları ve ses çalışmaları, çocukların odak sürelerini güçlendirmeye, aktif dinlenme becerisi kazanmaya ve günlük yaşamlarına yansıyacak bir özgüven geliştirmeye doğrudan destek olur.
+        </p>
+      </div>
+
+      <!-- Soru 5 -->
+      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
+        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">5. Başvuru sonrasında süreç ve seanslar nasıl ilerliyor?</h3>
+        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base mb-4">
+          İletişim kurduktan sonra yol haritamız 4 temel adımdan oluşur:
+        </p>
+        <ul class="space-y-2 text-[#333333]/75 text-sm md:text-base">
+          <li class="flex gap-2"><strong class="text-wood">&bull;</strong> <strong>Deneme ve Tanışma Seansı:</strong> Çocukla ilk buluşma, ortamı ve enstrümanları keşif.</li>
+          <li class="flex gap-2"><strong class="text-wood">&bull;</strong> <strong>Çocuğa Özel Değerlendirme:</strong> Çocuğun tepkileri, eğilimleri ve odak süresinin gözlemlenmesi.</li>
+          <li class="flex gap-2"><strong class="text-wood">&bull;</strong> <strong>Çocuğa Özel Program:</strong> Çocuğun dünyasına ve temposuna en uygun içerik ve akışın tasarlanması.</li>
+          <li class="flex gap-2"><strong class="text-wood">&bull;</strong> <strong>Seanslar:</strong> Birebir, neşeli ve sürdürülebilir müzik yolculuğunun düzenli olarak hayata geçirilmesi.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Aklınızdaki sorunun cevabını bulamadıysanız -->
+    <div class="mt-12 text-center bg-[#EDE6D9] p-8 rounded-2xl border border-[#6F5950]/15">
+      <p class="text-[#333333]/80 text-base md:text-lg mb-4">Aklınızdaki sorunun cevabını bulamadıysanız bize ulaşın.</p>
+      <a href="#connect" class="btn-primary inline-block bg-terracotta text-white px-8 py-3 rounded-full text-sm tracking-wide">Bize Ulaşın</a>
+    </div>
+  </div>
+</section>
+
+<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
+  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
+</svg>
+
 <!-- ===================== TESTIMONIALS ===================== -->
-<section id="testimonials" class="py-20 md:py-28 px-6 md:px-10 bg-[#FAF7F2]">
+<section id="testimonials" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-7xl mx-auto">
     <div class="text-center max-w-2xl mx-auto mb-16">
       <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Veli Gözünden</p>
       <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333]">Ailelerin deneyimleri</h2>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-      <div class="bg-white p-8 rounded-2xl border border-[#333333]/5 flex flex-col justify-between shadow-sm">
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- 1. Kutu -->
+      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
         <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
-          &ldquo;Çocuğumuzun müziğe yaklaşımı tamamen değişti. Evde artık kendi ritimlerini yaratıyor ve ders günlerini büyük bir heyecanla bekliyor. Gösterilen birebir ilgi ve sabır harika.&rdquo;
+          &ldquo;3 yaşında kızımın kreşte yaşadığı bir olumsuzluktan dolayı ruhuna iyi gelmesi için Volkan Bey'le çalışmıştık. Kızım üzerinde çok olumlu yansımaları oldu. Volkan Bey'in seanstan sonraki yorumları bu süreçte bize çok yardımcı oldu. Kızımızı mükemmel analiz etti. Olumsuz durum çok şükür geçti ama biz hala devam etmeye niyetliyiz. Tavsiye ederim.&rdquo;
         </p>
-        <p class="text-sm font-medium text-wood">&mdash; Bir İlkokul Öğrencisi Velisi</p>
+        <p class="text-sm font-medium text-wood">&mdash; Melike K.</p>
       </div>
 
-      <div class="bg-white p-8 rounded-2xl border border-[#333333]/5 flex flex-col justify-between shadow-sm">
+      <!-- 2. Kutu -->
+      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
         <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
-          &ldquo;Okul çağındaki çocuğumuzun odaklanma ve ifade becerilerinde seansların katkısını kısa sürede fark ettik. Ezberci bir kurs değil, tamamen çocuğa özel bir yolculuk.&rdquo;
+          &ldquo;Nevin hanımdan rica edilecek&rdquo;
         </p>
-        <p class="text-sm font-medium text-wood">&mdash; Ortaokul Öğrencisi Velisi</p>
+        <p class="text-sm font-medium text-wood">&mdash; Nevin K.</p>
+      </div>
+
+      <!-- 3. Kutu -->
+      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
+        <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
+          &ldquo;Çocuğunuzun benden almış olduğu müzik seansına dair görüş ve yorumlarınızı paylaşırsanız çok seviniriz&rdquo;
+        </p>
+        <p class="text-sm font-medium text-wood">&mdash; Volkan Susüzer</p>
       </div>
     </div>
   </div>
@@ -289,14 +377,14 @@
   <path d="M0,30 C150,-10 300,70 450,30 C600,-10 750,70 900,30 C1000,5 1100,55 1200,30"/>
 </svg>
 
-<!-- ===================== ABOUT (EĞİTİM & TECRÜBE, 4 FOTOĞRAF SLIDER & İKİ KOLON HİKAYE) ===================== -->
-<section id="about" class="py-20 md:py-28 px-6 md:px-10">
+<!-- ===================== ABOUT (EĞİTİM VE HİKAYEMİZ) ===================== -->
+<section id="about" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/50">
   <div class="max-w-7xl mx-auto">
-    <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5 text-center">Hikaye & Eğitim</p>
+    <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5 text-center">Eğitim ve Hikayemiz</p>
     <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-12 text-center">Eğitim, Tecrübe ve Yolculuk</h2>
 
     <!-- 1. Eğitim ve Tecrübe Kısmı (Tek Paragraf) -->
-    <div class="bg-[#FAF7F2] p-8 md:p-12 rounded-3xl border border-[#333333]/5 shadow-sm mb-16 max-w-4xl mx-auto">
+    <div class="bg-white p-8 md:p-12 rounded-3xl border border-[#6F5950]/10 shadow-sm mb-16 max-w-4xl mx-auto">
       <p class="text-[#333333]/85 leading-relaxed text-base md:text-lg">
         Mühendislik temellerimi ODTÜ Makine Mühendisliği'nde atıp ardından Akustik alanında yüksek lisans yaparak sesin fiziğiyle bağ kurdum. Bu teknik altyapıyı, Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'dan aldığım 3 yıllık flüt eğitimi ve müzik disipliniyle zenginleştirdim. 2004-2005 yıllarında ODTÜ Adayı Çocuklara Yaz Kampı Liderliği ile başlayan çocuklarla çalışma tutkum, yıllar içerisinde onlarca çocuk ve gence verdiğim birebir enstrüman seanslarıyla bugün Ses Yolculukları çatısı altında büyümeye devam ediyor.
       </p>
@@ -309,31 +397,19 @@
         <div class="slider-container relative w-full h-full">
           <!-- Slide 1 -->
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-100 flex items-center justify-center">
-            <img src="images/handpan_deniz.jpg" alt="Handpan ile müzik seansı" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
-            <div class="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-sm text-white px-4 py-2 rounded-xl text-sm">
-              Handpan ile doğaçlama ve ses keşif seansları
-            </div>
+            <img src="images/child3.jpg" alt="Çocuk müzik deneyimi" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
           <!-- Slide 2 -->
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
-            <img src="images/kid2.jpg" alt="Çocuk müzik seansı" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
-            <div class="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-sm text-white px-4 py-2 rounded-xl text-sm">
-              Orff yaklaşımıyla ritim ve oyun çalışmaları
-            </div>
+            <img src="images/Jar_flute.jpg" alt="Kavanoz flüt ve akustik sesler" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
           <!-- Slide 3 -->
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
-            <img src="images/childdev1.jpg" alt="Gelişimsel müzik seansı" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
-            <div class="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-sm text-white px-4 py-2 rounded-xl text-sm">
-              Odaklanma ve ifadeyi destekleyen özel enstrümanlar
-            </div>
+            <img src="images/handpan_deniz.jpg" alt="Handpan ile müzik seansı" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
           <!-- Slide 4 -->
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
-            <img src="images/handpan_deniz.jpg" alt="Konser ve topluluk odaları" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
-            <div class="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-sm text-white px-4 py-2 rounded-xl text-sm">
-              Yolculuktan kareler: Üç kıtaya yayılan müzik deneyimi
-            </div>
+            <img src="images/kanun2.jpg" alt="Kanun ve geleneksel enstrümanlar" class="w-full h-full object-cover object-top cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
         </div>
 
@@ -357,7 +433,7 @@
 
     <!-- 3. Hikaye Kısmı (İki Kolon) -->
     <h3 class="font-display text-3xl text-[#333333] mb-8 text-center">Ses Yolculukları'nın Hikayesi</h3>
-    <div class="grid md:grid-cols-2 gap-10 lg:gap-14 text-[#333333]/80 leading-relaxed text-base md:text-lg bg-[#FAF7F2] p-8 md:p-12 rounded-3xl border border-[#333333]/5 shadow-sm">
+    <div class="grid md:grid-cols-2 gap-10 lg:gap-14 text-[#333333]/80 leading-relaxed text-base md:text-lg bg-white p-8 md:p-12 rounded-3xl border border-[#6F5950]/10 shadow-sm">
       <div class="space-y-6">
         <p>
           Sizi bilmem ama hayat bana çocukluğumda müzik konusunda pek cömert davranmadı. Etrafımda müzik aşkı olan veya sevgiyle enstrüman çalan kimse yoktu; okuldaki müzik dersleri ise müziği sevdirmekten çok ondan uzaklaştıran talihsiz deneyimlerdi.
@@ -377,7 +453,7 @@
           En büyük heyecanım; müziğin çocukların dünyasında kelimelerin ötesine geçerek yarattığı o özgür alanı görmek ve sesin gelişimlerindeki mucizevi gücüne eşlik etmek. Öte yandan, içinden "keşke ben de bir enstrüman çalabilseydim" diyen yetişkinlere de o uzun zamandır aradıkları alanı açıyorum.
         </p>
         <p class="font-medium text-wood pt-2">
-          Çocuk ya da yetişkin fark etmez; müzikle ve sesle bağ kurmak düşünülen kadar zor değil ve bunun kesinlikle bir yaşı yok. Sizi de bu yolculuklara davet ediyorum.
+          Çocuk ya da yetişkin fark etmez; müzikle ve sesle bağ kurmak düşünüler kadar zor değil ve bunun kesinlikle bir yaşı yok. Sizi de bu yolculuklara davet ediyorum.
         </p>
       </div>
     </div>
@@ -393,7 +469,7 @@
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-12">
       <p class="text-[#F5F2ED]/70 text-sm tracking-[0.2em] uppercase mb-5">Başlayın</p>
-      <h2 class="font-display text-4xl md:text-5xl leading-tight text-white mb-5">Çocuk İçin Özel Ses Yolculuğu Değerlendirmesi</h2>
+      <h2 class="font-display text-4xl md:text-5xl leading-tight text-white mb-5">Bize Ulaşın</h2>
       <p class="text-[#F5F2ED]/70 max-w-xl mx-auto leading-relaxed">
         Birkaç düşünceli soru, çocuğunuzun ihtiyaç duyduğu doğru yolu şekillendirmeye yardımcı olur. Her başvuru bizzat okunur &mdash; otomatik formlar veya asistanlar yok, sadece gerçek bir değerlendirme var.
       </p>
@@ -423,16 +499,21 @@
       </div>
 
       <div>
-        <label for="connection" class="block text-sm text-wood mb-2">Çocuğunuzun müzikle veya sesle olan ilişkisinden kısaca bahseder misiniz?</label>
-        <textarea id="connection" rows="3" placeholder="Merak ettiği enstrümanlar, evdeki ilgisi veya özel beklentiniz&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
+        <label for="connection" class="block text-sm text-wood mb-2">Çocuğunuzun müzik ve seslerle ilişkisi nasıldır?</label>
+        <textarea id="connection" rows="3" placeholder="Merak ettiği konular, ilgileri veya seslerle kurduğu bağ&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
+      </div>
+
+      <div>
+        <label for="history" class="block text-sm text-wood mb-2">Varsa geleneksel ders geçmişi / müzik eğitimi deneyimi nedir?</label>
+        <textarea id="history" rows="2" placeholder="Daha önce herhangi bir enstrüman veya ders geçmişi var mı?&hellip;" class="w-full bg-white border border-wood/20 rounded-xl px-4 py-3 text-[#333333] placeholder:text-[#333333]/35 transition-colors resize-none"></textarea>
       </div>
 
       <div class="flex items-start gap-3 text-xs text-wood/70 -mt-1">
         <svg class="w-4 h-4 mt-0.5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
-        <p>Her değerlendirme bizzat kurucu tarafından incelenir &mdash; görüşler ve sonraki adımlarla ilgili 2&ndash;3 gün içinde doğrudan dönüş alırsınız.</p>
+        <p>Her mesaj bizzat kurucu tarafından incelenir &mdash; görüşler ve sonraki adımlarla ilgili 2&ndash;3 gün içinde doğrudan dönüş alırsınız.</p>
       </div>
 
-      <button type="submit" class="btn-primary bg-terracotta text-white rounded-full py-4 tracking-wide text-sm mt-2">Değerlendirme Talebini Gönder</button>
+      <button type="submit" class="btn-primary bg-terracotta text-white rounded-full py-4 tracking-wide text-sm mt-2">Bize Ulaşın</button>
     </form>
   </div>
 </section>
@@ -442,8 +523,22 @@
   <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-[#333333]/55">
     <p class="font-display text-lg text-wood">Ses Yolculukları</p>
     <p>&copy; 2026 Ses Yolculukları. Tüm hakları saklıdır.</p>
-    <div class="flex gap-6">
-      <a href="#hero" class="hover:text-terracotta transition-colors">Başa dön</a>
+    
+    <!-- Sosyal Medya & İletişim Bağlantıları (LinkedIn, Instagram, WhatsApp) -->
+    <div class="flex items-center gap-5 flex-wrap justify-center">
+      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-terracotta transition-colors flex items-center gap-1.5" aria-label="LinkedIn">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <span>LinkedIn</span>
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover:text-terracotta transition-colors flex items-center gap-1.5" aria-label="Instagram">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        <span>Instagram</span>
+      </a>
+      <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" class="hover:text-terracotta transition-colors flex items-center gap-1.5" aria-label="WhatsApp">
+        <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span>WhatsApp</span>
+      </a>
+      <a href="#hero" class="hover:text-terracotta transition-colors ml-2">Başa dön</a>
     </div>
   </div>
 </footer>
@@ -530,7 +625,7 @@
   function handleDocumentClick(event) {
     const modal = document.getElementById('imageModal');
     if (!modal.classList.contains('hidden') && event.target === modal) {
-      closeModal();
+      closeModal5();
     }
   }
 
