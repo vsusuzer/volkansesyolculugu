@@ -41,6 +41,19 @@
   }
   .font-display{font-family:'Fraunces', serif; font-optical-sizing:auto;}
   .font-mono{font-family:'IBM Plex Mono', monospace;}
+  
+  /* Tüm paragrafları iki yana yaslama */
+  p, li {
+    text-align: justify;
+  }
+  /* Başlıklar ve butonlar yaslanmasın, sola/ortaya hizalı kalsın */
+  h1, h2, h3, h4, h5, h6, .eyebrow, button, a.btn-primary, a.btn-outline, a.btn-outline-dark, .nav-link, .mobile-link {
+    text-align: left;
+  }
+  .text-center p, .text-center {
+    text-align: center;
+  }
+
   .eyebrow{
     font-family:'IBM Plex Mono', monospace;
     font-size:0.7rem;
@@ -59,7 +72,7 @@
   .border-hair-dark{border-color:var(--hair);}
 
   /* Signature waveform divider — an unbroken thin line running the width of the page,
-      standing for each child's own frequency and pace. */
+      standing for each child's own frequency ve pace. */
   .wave-divider{width:100%; height:44px; display:block;}
   .wave-divider path{fill:none; stroke:var(--brass); stroke-width:1; stroke-linecap:round; opacity:0.55;}
   .wave-divider.on-dark path{stroke:var(--brass); stroke-width:1; opacity:0.55;}
@@ -247,14 +260,14 @@
     </div>
 
     <div class="order-1 md:order-2">
-      <p class="eyebrow mb-5">3–13 Yaş · Birebir and Özel Yaklaşım</p>
+      <p class="eyebrow mb-5">3–13 Yaş · Birebir ve Özel Yaklaşım</p>
       <h2 class="font-display text-3xl md:text-[2.2rem] leading-tight mb-6" style="color:var(--ink)">Oyun Temelli Bir Müzik Dili</h2>
       <p class="leading-relaxed mb-6 max-w-lg" style="color:var(--ink-soft)">
-        Her seans çocuğunuzun kendi temposuna, dikkat süresine, merakına and sesine göre şekillenir. Ritim, hareket and özenle seçilmiş enstrümanlar; çocuğun herhangi bir zorlama ya da baskı hissetmeden müzikle kendi bağını kurmasına alan açar.
+        Her seans çocuğunuzun kendi temposuna, dikkat süresine, merakına ve sesine göre şekillenir. Ritim, hareket ve özenle seçilmiş enstrümanlar; çocuğun herhangi bir zorlama ya da baskı hissetmeden müzikle kendi bağını kurmasına alan açar.
       </p>
       <ul class="space-y-3 mb-8" style="color:var(--ink)">
         <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Tamamen kişiselleştirilmiş seans akışı</li>
-        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Beden perküsyonu, vurmalı çalgılar and şarkı söyleme</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Beden perküsyonu, vurmalı çalgılar ve şarkı söyleme</li>
       </ul>
       <a href="#connect" class="text-sm tracking-wide border-b pb-1 transition-colors" style="color:var(--ink); border-color:var(--ink-faint)">Çocuğunuz için ilk adımı atın &rarr;</a>
     </div>
@@ -266,14 +279,14 @@
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
     <div>
       <p class="eyebrow mb-5">Gelişimsel Destek</p>
-      <h2 class="font-display text-3xl md:text-[2.2rem] leading-tight mb-6" style="color:var(--ink)">Konuşmayı, Dikkati and İfadeyi Desteklemek</h2>
+      <h2 class="font-display text-3xl md:text-[2.2rem] leading-tight mb-6" style="color:var(--ink)">Konuşmayı, Dikkativeİfadeyi Desteklemek</h2>
       <p class="leading-relaxed mb-6 max-w-lg" style="color:var(--ink-soft)">
-        Oyun temelli müzik yaklaşımının doğası; dikkat dağınıklığı ya da ifade zorluğu yaşayan çocukların dünyasında, kelimelerin tek başına ulaşamadığı noktalara dokunur. Sürecin her aşamasında çocuğunuzun psikoloğuyla yakın iletişim halinde kalarak seansları onun gelişimsel ihtiyaçlarına göre şekillendiriyor; oyun, ritim and bedensel hareketler aracılığıyla odaklanmayı güçlendirirken bu yapıyı ortak değerlendirmelerle destekliyoruz.
+        Oyun temelli müzik yaklaşımının doğası; dikkat dağınıklığı ya da ifade zorluğu yaşayan çocukların dünyasında, kelimelerin tek başına ulaşamadığı noktalara dokunur. Sürecin her aşamasında çocuğunuzun psikoloğuyla yakın iletişim halinde kalarak seansları onun gelişimsel ihtiyaçlarına göre şekillendiriyor; oyun, ritimvebedensel hareketler aracılığıyla odaklanmayı güçlendirirken bu yapıyı ortak değerlendirmelerle destekliyoruz.
       </p>
       <ul class="space-y-3 mb-8" style="color:var(--ink)">
-        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Oyun temelli soru-cevap and ritim oyunlarıyla geliştirilen dikkat</li>
-        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Şarkılar and beden perküsyonuyla örülen konuşma and artikülasyon</li>
-        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Doğaçlama yoluyla güvenli and sağlıklı bir duygusal ifade alanı</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Oyun temelli soru-cevapveritim oyunlarıyla geliştirilen dikkat</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Şarkılarvebeden perküsyonuyla örülen konuşmaveartikülasyon</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Doğaçlama yoluyla güvenlivesağlıklı bir duygusal ifade alanı</li>
       </ul>
       <a href="#connect" class="text-sm tracking-wide border-b pb-1 transition-colors" style="color:var(--ink); border-color:var(--ink-faint)">Çocuğunuz için ilk adımı atın &rarr;</a>
     </div>
@@ -296,16 +309,16 @@
     <p class="eyebrow eyebrow-dark mb-5">Felsefemiz</p>
     <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-ivory mb-8">Oyun Temelli Müzik Yaklaşımı</h2>
     <p class="font-display italic text-xl md:text-2xl leading-relaxed mb-14 text-ivory-soft">
-      &ldquo;Çocukların dünyasında öğrenmenin en ana dili oyundur. Bu yaklaşım, sesleri, ritmi, harekete and doğaçlamayı bir araya getirerek müziği kuru bir ders olmaktan çıkarır; çocuğun içsel dünyasına hitap eden, yaşayan bir deneyime dönüştürür.&rdquo;
+      &ldquo;Çocukların dünyasında öğrenmenin en ana dili oyundur. Bu yaklaşım, sesleri, ritmi, hareketevedoğaçlamayı bir araya getirerek müziği kuru bir ders olmaktan çıkarır; çocuğun içsel dünyasına hitap eden, yaşayan bir deneyime dönüştürür.&rdquo;
     </p>
 
     <div class="text-left border border-hair-dark p-8 md:p-10">
       <h3 class="font-display text-xl text-ivory mb-4">Dünyaca Kabul Görmüş Yaklaşımların Gücü</h3>
       <p class="leading-relaxed text-sm md:text-base mb-4 text-ivory-soft">
-        Bu yaklaşımın temelinde, müzik eğitiminde çığır açmış köklü ekoller yer alır. Carl Orff'un beden perküsyonunu, ritmi and konuşmayı merkeze alan Orff metodu; Zoltán Kodály'in sesin and işitmenin doğallığını savunan felsefesi; Émile Jaques-Dalcroze'un beden hareketleriyle müziği hissettiren ritmik hareket sistemi and Maria Montessori'nin çocuğun özgür keşfine duyduğu saygı, bu ekosistemin yapı taşlarını oluşturur.
+        Bu yaklaşımın temelinde, müzik eğitiminde çığır açmış köklü ekoller yer alır. Carl Orff'un beden perküsyonunu, ritmivekonuşmayı merkeze alan Orff metodu; Zoltán Kodály'in sesinveişitmenin doğallığını savunan felsefesi; Émile Jaques-Dalcroze'un beden hareketleriyle müziği hissettiren ritmik hareket sistemiveMaria Montessori'nin çocuğun özgür keşfine duyduğu saygı, bu ekosistemin yapı taşlarını oluşturur.
       </p>
       <p class="leading-relaxed text-sm md:text-base text-ivory-soft">
-        Bu yöntemlerin ortak noktası, çocuğa dışarıdan bilgi dayatmak yerine, onun içindeki ritmi and yaratıcılığı oyun yoluyla uyandırmaktır.
+        Bu yöntemlerin ortak noktası, çocuğa dışarıdan bilgi dayatmak yerine, onun içindeki ritmiveyaratıcılığı oyun yoluyla uyandırmaktır.
       </p>
     </div>
   </div>
@@ -319,16 +332,16 @@
 <section id="tendency" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-14">
-      <p class="eyebrow mb-5">Enstrüman and İlgi Keşfi</p>
+      <p class="eyebrow mb-5">Enstrümanveİlgi Keşfi</p>
       <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight mb-6" style="color:var(--ink)">Çocuğunuzun Dünyasına Hitap Eden Zengin Bir Ses Paleti</h2>
       <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style="color:var(--ink-soft)">
-        Handpan, arp, flüt, gitar, kalimba, ukulele and ksilofon gibi eşsiz ses dokularına sahip enstrümanlar eşliğinde, çocuğunuzun doğal merakının hangi sese yöneldiğini birlikte keşfediyoruz.
+        Handpan, arp, flüt, gitar, kalimba, ukuleleveksilofon gibi eşsiz ses dokularına sahip enstrümanlar eşliğinde, çocuğunuzun doğal merakının hangi sese yöneldiğini birlikte keşfediyoruz.
       </p>
     </div>
 
     <div class="art-frame max-w-4xl mx-auto mb-12">
       <div class="relative overflow-hidden group">
-        <img src="images/instruments_discovery.jpg" alt="Handpan, yan flüt, kalimba, gitar, ukulele, ksilofon and arp enstrümanları" loading="lazy" class="w-full h-auto object-cover cursor-zoom-in transition-transform duration-700 group-hover:scale-[1.03]" onclick="openModal(this.src, this.alt)">
+        <img src="images/instruments_discovery.jpg" alt="Handpan, yan flüt, kalimba, gitar, ukulele, ksilofonvearp enstrümanları" loading="lazy" class="w-full h-auto object-cover cursor-zoom-in transition-transform duration-700 group-hover:scale-[1.03]" onclick="openModal(this.src, this.alt)">
         <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#221E18]/85 via-[#221E18]/35 to-transparent p-6 md:p-8 flex flex-col justify-end">
           <p class="text-ivory font-display italic text-lg md:text-xl mb-1">Müziğin Zengin Tonları</p>
           <p class="text-ivory-soft text-xs md:text-sm">Her biri farklı bir ses dokusu taşıyan bu enstrümanlarla çocuğunuzun doğasına en uygun sesi birlikte keşfediyoruz.</p>
@@ -340,16 +353,16 @@
       <div class="bg-[#F3EEE1] p-8 border border-hair">
         <h3 class="font-display text-xl mb-4" style="color:var(--ink)">İlk Buluşmalar Nasıl İlerler?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Çocukların müzikal refleksleri, doğru bir rehberlik and oyun ortamında ilk birkaç seans içinde net bir şekilde gün yüzüne çıkar. Çocuğun hangi enstrümanlara ilgi duyduğu bu süreçte kendini gösterir.
+          Çocukların müzikal refleksleri, doğru bir rehberlikveoyun ortamında ilk birkaç seans içinde net bir şekilde gün yüzüne çıkar. Çocuğun hangi enstrümanlara ilgi duyduğu bu süreçte kendini gösterir.
         </p>
       </div>
 
       <div class="bg-forest p-8">
         <h3 class="font-display text-xl text-ivory mb-4">Müzikal Yol Haritası</h3>
         <ul class="space-y-4 text-sm md:text-base text-ivory-soft">
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#8A6A32">&#10003;</span> <strong class="text-ivory">Çeşitlilik and Keşif:</strong> Zengin ses dokularıyla desteklenmiş, keşfe açık bir seans ortamı.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#8A6A32">&#10003;</span> <strong class="text-ivory">ÇeşitlilikveKeşif:</strong> Zengin ses dokularıyla desteklenmiş, keşfe açık bir seans ortamı.</li>
           <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#8A6A32">&#10003;</span> <strong class="text-ivory">Çocuğun Seçimi:</strong> Baskı olmadan, tamamen çocuğun ilgisine göre şekillenen enstrüman odağı.</li>
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#8A6A32">&#10003;</span> <strong class="text-ivory">Esnek Alan:</strong> İhtiyaç duyulduğunda enstrümanlar arasında keyifli and akışkan geçişler.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#8A6A32">&#10003;</span> <strong class="text-ivory">Esnek Alan:</strong> İhtiyaç duyulduğunda enstrümanlar arasında keyifliveakışkan geçişler.</li>
         </ul>
       </div>
     </div>
@@ -364,10 +377,10 @@
 <section id="philosophy" class="py-20 md:py-28 px-6 md:px-10 bg-paper-deep">
   <div class="max-w-5xl mx-auto">
     <div class="text-center mb-14">
-      <p class="eyebrow mb-5">Metodoloji and Yaklaşım Farkı</p>
+      <p class="eyebrow mb-5">MetodolojiveYaklaşım Farkı</p>
       <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight mb-6" style="color:var(--ink)">Geleneksel Müzik Eğitimi Neden Erken Yaşta Yetersiz Kalabilir?</h2>
       <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style="color:var(--ink-soft)">
-        Standart müzik metotları başarısız oldukları için değil; genellikle daha ileri yaşların bilişsel dünyasına göre tasarlandıkları için çocukluk döneminde eksik kalır. Oysa büyüme çağındaki çocuklar için enstrüman seçimi, oyun and serbest yaratıcı alan hayati önem taşır.
+        Standart müzik metotları başarısız oldukları için değil; genellikle daha ileri yaşların bilişsel dünyasına göre tasarlandıkları için çocukluk döneminde eksik kalır. Oysa büyüme çağındaki çocuklar için enstrüman seçimi, oyunveserbest yaratıcı alan hayati önem taşır.
       </p>
     </div>
 
@@ -375,8 +388,8 @@
       <div class="bg-[#F3EEE1] p-8 border border-hair">
         <div class="font-display italic text-lg mb-4" style="color:var(--ink-soft)">Geleneksel / Standart Metotların Sınırları</div>
         <ul class="space-y-4 text-sm md:text-base" style="color:var(--ink-soft)">
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> 13 yaş and üzeri soyut düşünce dönemine göre tasarlandığı için erken yaşta ezbere and nota okumaya dayalıdır.</li>
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> Tek tip enstrüman zorunluluğu getirir; çocukların kendi seslerini and bedenlerini keşfetme alanını daraltır.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> 13 yaşveüzeri soyut düşünce dönemine göre tasarlandığı için erken yaşta ezberevenota okumaya dayalıdır.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> Tek tip enstrüman zorunluluğu getirir; çocukların kendi seslerinivebedenlerini keşfetme alanını daraltır.</li>
           <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> Performans baskısı yaratarak çocukları erken yaşta müzikten soğutma riski taşır.</li>
         </ul>
       </div>
@@ -384,9 +397,9 @@
       <div class="p-8 border bg-[#F3EEE1]" style="border-color:var(--hair);">
         <div class="font-display italic text-lg mb-4" style="color:var(--brass-deep)">Müzikle Yolculuk &amp; Oyun Temelli Yaklaşım</div>
         <ul class="space-y-4 text-sm md:text-base" style="color:var(--ink-soft)">
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--brass-deep)">&#10003;</span> <strong style="color:var(--ink)">Tamamen 3–13 yaş aralığının somut öğrenme dünyasına, dikkat süresine and oyun ihtiyacına göre tasarlanmıştır.</strong></li>
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--brass-deep)">&#10003;</span> <strong style="color:var(--ink)">Doğru enstrüman seçimi, beden perküsyonu and serbest doğaçlama alanı sağlar.</strong></li>
-          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--brass-deep)">&#10003;</span> <strong style="color:var(--ink)">Çocuğun içindeki potansiyeli baskılamadan, müzikle ömür boyu sürecek içsel and neşeli bir bağ kurar.</strong></li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--brass-deep)">&#10003;</span> <strong style="color:var(--ink)">Tamamen 3–13 yaş aralığının somut öğrenme dünyasına, dikkat süresineveoyun ihtiyacına göre tasarlanmıştır.</strong></li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--brass-deep)">&#10003;</span> <strong style="color:var(--ink)">Doğru enstrüman seçimi, beden perküsyonuveserbest doğaçlama alanı sağlar.</strong></li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--brass-deep)">&#10003;</span> <strong style="color:var(--ink)">Çocuğun içindeki potansiyeli baskılamadan, müzikle ömür boyu sürecek içselveneşeli bir bağ kurar.</strong></li>
         </ul>
       </div>
     </div>
@@ -408,12 +421,12 @@
       <div class="p-8 bg-forest">
         <span class="font-mono text-xs" style="color:var(--brass-deep)">01</span>
         <h3 class="font-display text-lg text-ivory mt-2 mb-2">Ön Görüşme</h3>
-        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğunuzu, beklentilerinizi and merak ettiklerinizi konuştuğumuz kısa bir tanışma görüşmesi.</p>
+        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğunuzu, beklentilerinizivemerak ettiklerinizi konuştuğumuz kısa bir tanışma görüşmesi.</p>
       </div>
       <div class="p-8 bg-forest">
         <span class="font-mono text-xs" style="color:var(--brass-deep)">02</span>
-        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Gözlem and Değerlendirme</h3>
-        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğun tepkileri, enstrüman ilgisi and odak süresinin bir deneme seansında gözlemlenmesi.</p>
+        <h3 class="font-display text-lg text-ivory mt-2 mb-2">GözlemveDeğerlendirme</h3>
+        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğun tepkileri, enstrüman ilgisiveodak süresinin bir deneme seansında gözlemlenmesi.</p>
       </div>
       <div class="p-8 bg-forest">
         <span class="font-mono text-xs" style="color:var(--brass-deep)">03</span>
@@ -422,8 +435,8 @@
       </div>
       <div class="p-8 bg-forest">
         <span class="font-mono text-xs" style="color:var(--brass-deep)">04</span>
-        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Program and Seanslar</h3>
-        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğunuza özel akışla, birebir and sürdürülebilir müzik yolculuğunun başlaması.</p>
+        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Program ve Seanslar</h3>
+        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğunuza özel akışla, birebirvesürdürülebilir müzik yolculuğunun başlaması.</p>
       </div>
     </div>
   </div>
@@ -439,44 +452,44 @@
 
     <div class="space-y-5">
       <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
-        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Müzik seanslarının akışı and içeriği hakkında bilgi verebilir misiniz?</h3>
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Müzik seanslarının akışı ve içeriği hakkında bilgi verebilir misiniz?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Seanslar, çocuğun kendi hızında and baskıdan uzak bir ortamda seslerle, ritimlerle buluştuğu özgür bir keşif alanıdır. Çocuğun kendini güvende hissetmesi için süreç boyunca anne ya da baba da stüdyoda yer alır. Sabit bir kalıp izlemek yerine çocuğun o anki akışına and dikkat süresine odaklandığımız için seanslar genellikle 30 ile 60 dakika arasında sürer.
+          Seanslar, çocuğun kendi hızında ve baskıdan uzak bir ortamda seslerle, ritimlerle buluştuğu özgür bir keşif alanıdır. Çocuğun kendini güvende hissetmesi için süreç boyunca anne ya da baba da stüdyoda yer alır. Sabit bir kalıp izlemek yerine çocuğun o anki akışına ve dikkat süresine odaklandığımız için seanslar genellikle 30 ile 60 dakika arasında sürer.
         </p>
       </div>
 
       <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
         <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Müzik seansları, çocuğumun halihazırdaki terapi veya psikolojik destek sürecini nasıl destekliyor?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Müziği gelişimsel destek için çok güçlü bir köprü olarak görüyoruz. Bu doğrultuda, çocuğunuzun psikoloğu and/or pedagoğuyla sürekli iletişim halinde kalarak seanslarda edindiğimiz tüm gözlemleri and bilgileri uzmanıyla paylaşıyor; mevcut destek sürecine el birliğiyle katkı sunuyoruz.
+          Müziği gelişimsel destek için çok güçlü bir köprü olarak görüyoruz. Bu doğrultuda, çocuğunuzun psikoloğu and/or pedagoğuyla sürekli iletişim halinde kalarak seanslarda edindiğimiz tüm gözlemleri ve bilgileri uzmanıyla paylaşıyor; mevcut destek sürecine el birliğiyle katkı sunuyoruz.
         </p>
       </div>
 
       <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
         <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Çocuğumun daha önce hiç müzik eğitimi veya enstrüman deneyimi yok, bu durum bir dezavantaj mı?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Hayır; aksine, geleneksel kurallarla henüz tanışmamış olmak çocuk için bir avantajdır. Kullandığımız oyun temelli yaklaşım önceden bir bilgi ya da beceri gerektirmez; çocukların içindeki doğal ritmi and merakı oyun yoluyla uyandırmayı hedefler.
+          Hayır; aksine, geleneksel kurallarla henüz tanışmamış olmak çocuk için bir avantajdır. Kullandığımız oyun temelli yaklaşım önceden bir bilgi ya da beceri gerektirmez; çocukların içindeki doğal ritmi ve merakı oyun yoluyla uyandırmayı hedefler.
         </p>
       </div>
 
       <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
         <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Geleneksel enstrüman kurslarından (piyano, keman vb.) farkınız tam olarak nedir?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Klasik kurslar genellikle nota ezberletme and teknik baskı üzerine kuruludur; bu, erken yaş grubundaki çocukların somut öğrenme dünyasına ağır gelebilir. Biz oyun temelli yaklaşımın rehberliğinde çocukların doğru enstrümanı seçmesini, beden perküsyonunu and doğaçlamayı kullanarak müzikle içsel and neşeli bir bağ kurmasını sağlıyoruz.
+          Klasik kurslar genellikle nota ezberletme ve teknik üzerine kuruludur; bu, erken yaş grubundaki çocukların somut öğrenme dünyasına ağır gelebilir. Biz oyun temelli yaklaşımın rehberliğinde çocukların doğru enstrümanı seçmesini, beden perküsyonunu ve doğaçlamayı kullanarak müzikle içsel ve neşeli bir bağ kurmasını sağlıyoruz.
         </p>
       </div>
 
       <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
-        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Hangi enstrümanlarla çalışıyoruz and çocuğumun hangisine ilgisi olduğunu nasıl belirliyoruz?</h3>
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Hangi enstrümanlarla çalışıyoruz ve çocuğumun hangisine ilgisi olduğunu nasıl belirliyoruz?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Seanslarımızda handpan, arp, flüt, gitar, kalimba, ukulele and ksilofon gibi zengin enstrüman seçenekleri bulunur. Çocuğun bu enstrümanlar arasından hangisine ilgi duyduğu, ilk birkaç seans içinde oyun and keşif yoluyla kendiliğinden ortaya çıkar. Önceden sabit bir enstrüman seçmenize gerek yoktur.
+          Seanslarımızda handpan, arp, flüt, gitar, kalimba, ukulele ve ksilofon gibi zengin enstrüman seçenekleri bulunur. Çocuğun bu enstrümanlar arasından hangisine ilgi duyduğu, ilk birkaç seans içinde oyun ve keşف yoluyla kendiliğinden ortaya çıkar. Önceden sabit bir enstrüman seçmenize gerek yoktur.
         </p>
       </div>
 
       <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
-        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Seanslara başlamadan önce pahalı bir enstrüman satın almamız gerekiyor mu?</h3>
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Seanslara başlamadan önce bir enstrüman satın almamız gerekiyor mu?</h3>
         <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
-          Hayır. Çocuğun hangi enstrümana ilgi duyduğu netleşene kadar tüm enstrüman imkanları seanslarda zaten sağlanır. İlerleyen süreçte evde çalışma ihtiyacı doğarsa, bütçenize and çocuğun yönelimine en uygun yönlendirmeyi birlikte yaparız.
+          Hayır. Çocuğun hangi enstrümana ilgi duyduğu netleşene kadar tüm enstrüman imkanları seanslarda zaten sağlanır. İlerleyen süreçte evde çalışma ihtiyacı doğarsa, bütçenize ve çocuğun yönelimine en uygun yönlendirmeyi birlikte yaparız.
         </p>
       </div>
     </div>
@@ -509,21 +522,21 @@
 
           <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
             <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
-              &ldquo;Oğlumun terapi sürecini destekleyecek, kendini özgürce ifade edebileceği bir alan ararken Volkan Bey ile yollarımız kesişti. Bizi bu süreçte en çok güvende hissettiren şey; Volkan Bey'in sadece müzik and ses seanslarını yürütmekle kalmayıp, sürecin başından itibaren çocuğumuzun psikoloğuyla düzenli iletişim halinde kalarak her seanstan sonra ortak değerlendirmeler yapması oldu. Çok teşekkür ederiz.&rdquo;
+              &ldquo;Oğlumun terapi sürecini destekleyecek, kendini özgürce ifade edebileceği bir alan ararken Volkan Bey ile yollarımız kesişti. Bizi bu süreçte en çok güvende hissettiren şey; Volkan Bey'in sadece müzik ve ses seanslarını yürütmekle kalmayıp, sürecin başından itibaren çocuğumuzun psikoloğuyla düzenli iletişim halinde kalarak her seanstan sonra ortak değerlendirmeler yapması oldu. Çok teşekkür ederiz.&rdquo;
             </p>
             <p class="font-mono text-xs" style="color:var(--brass-deep)">7 Yaşında Erkek Çocuk Annesi</p>
           </div>
 
           <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
             <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
-              &ldquo;Volkan Bey'in seanslarında çocuklar için kurduğu rahat and baskıdan uzak ortamı çok sevdik. Kızım ilk başta biraz çekingen davranmıştı ancak müzik aletleriyle kendi hızında tanışmasına izin verilmesi süreci çok kolaylaştırdı. Evde de benzer şekilde seslerle oynamaya, kendi ritimlerini bulmaya başladı.&rdquo;
+              &ldquo;Volkan Bey'in seanslarında çocuklar için kurduğu rahat ve baskıdan uzak ortamı çok sevdik. Kızım ilk başta biraz çekingen davranmıştı ancak müzik aletleriyle kendi hızında tanışmasına izin verilmesi süreci çok kolaylaştırdı. Evde de benzer şekilde seslerle oynamaya, kendi ritimlerini bulmaya başladı.&rdquo;
             </p>
             <p class="font-mono text-xs" style="color:var(--brass-deep)">6 Yaşında Kız Çocuk Annesi</p>
           </div>
 
           <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
             <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
-              &ldquo;Hocamızın çocuklarla kurduğu sabırlı and acele etmeyen iletişim biçimi kızımıza çok iyi geldi. Kızım kendi hızında ilerleyebildiği için seanslara rahat katılıyor; evde de sesler and ritimlerle oynaması için keyifli bir alan oluştu.&rdquo;
+              &ldquo;Hocamızın çocuklarla kurduğu sabırlı ve acele etmeyen iletişim biçimi kızımıza çok iyi geldi. Kızım kendi hızında ilerleyebildiği için seanslara rahat katılıyor; evde de sesler ve ritimlerle oynaması için keyifli bir alan oluştu.&rdquo;
             </p>
             <p class="font-mono text-xs" style="color:var(--brass-deep)">8 Yaşında Kız Çocuk Annesi</p>
           </div>
@@ -547,11 +560,13 @@
 <section id="about" class="py-20 md:py-28 px-6 md:px-10 bg-forest">
   <div class="max-w-7xl mx-auto">
     <p class="eyebrow eyebrow-dark mb-5 text-center">Yolculuğum</p>
-    <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-ivory mb-12 text-center">Deneyimim</h2>
+    
+    <!-- Deneyimim yazısı fontu büyütüldü ve daha estetik bir karaktere kavuşturuldu -->
+    <h2 class="font-display italic text-3xl md:text-5xl font-medium tracking-wide text-ivory mb-12 text-center" style="font-family: 'Fraunces', serif;">Deneyimim</h2>
 
     <div class="border border-hair-dark p-8 md:p-12 mb-16 max-w-4xl mx-auto">
       <p class="leading-relaxed text-base md:text-lg text-ivory-soft italic mb-6">
-        &ldquo;Sesle olan yolculuğum 2003 yılında Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'la yaptığım çalışmalarla başladı. Müziğe olan büyük aşkım, zamanla sesin fiziğini daha derinden öğrenmek istememle beni akustik alanında master yapmaya yönlendirdi. ODTÜ Makine Mühendisliği'nde attığım temelleri bu ses dünyasıyla birleştirirken; 2005-2006 yıllarında ODTÜ Adayı Çocuklara Yaz Kampı liderliğiyle ilk adımlarını atan çocuklarla çalışma tutkum da hiç eksilmedi. Yıllar içerisinde dinletiler, konserler and onlarca çocuk and gence verdiğim birebir enstrüman seanslarıyla büyüyen bu yolculuk, bugün Müzikle Yolculuk çatısı altında hayat bulmaya devam ediyor.&rdquo;
+        &ldquo;Sesle olan yolculuğum 2003 yılında Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'la yaptığım çalışmalarla başladı. Müziğe olan büyük aşkım, zamanla sesin fiziğini daha derinden öğrenmek istememle beni akustik alanında master yapmaya yönlendirdi. ODTÜ Makine Mühendisliği'nde attığım temelleri bu ses dünyasıyla birleştirirken; 2005-2006 yıllarında ODTÜ Adayı Çocuklara Yaz Kampı liderliğiyle ilk adımlarını atan çocuklarla çalışma tutkum da hiç eksilmedi. Yıllar içerisinde dinletiler, konserler ve onlarca çocuk ve gence verdiğim birebir enstrüman seanslarıyla büyüyen bu yolculuk, bugün Müzikle Yolculuk çatısı altında hayat bulmaya devam ediyor.&rdquo;
       </p>
       <p class="font-display italic text-xl md:text-2xl text-ivory">Volkan Susüzer</p>
     </div>
@@ -563,7 +578,7 @@
             <img src="images/child3.jpg" alt="Çocuk müzik deneyimi" loading="lazy" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
-            <img src="images/Jar_flute.jpg" alt="Kavanoz flüt and akustik sesler" loading="lazy" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
+            <img src="images/Jar_flute.jpg" alt="Kavanoz flüt ve akustik sesler" loading="lazy" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
         </div>
       </div>
@@ -796,7 +811,7 @@
       }
   });
 
-  // 6. DIŞARI TIKLAMA İLE MENÜ and MODAL KAPATMA
+  // 6. DIŞARI TIKLAMA İLE MENÜ ve MODAL KAPATMA
   window.handleDocumentClick = function(event) {
       const mobileMenu = document.getElementById('mobileMenu');
       const menuBtn = document.getElementById('menuBtn');
