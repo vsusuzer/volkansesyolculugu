@@ -3,82 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seslerle Yolculuk — Çocuklar İçin Müzik, Gelişim & Oyun Temelli Yaklaşım</title>
+<title>Müzikle Yolculuk — Volkan Susüzer</title>
+<meta name="description" content="3–13 yaş çocuklar için birebir, oyun temelli müzik seansları. Sınırlı kontenjan, butik yaklaşım.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Müzikle Yolculuk">
+<meta property="og:description" content="Handpan, arp, flüt, gitar, kalimba, ukulele ve ksilofonla; çocuğunuzun kendi temposunda ilerlediği, birebir bir müzik yolculuğu.">
+<meta property="og:image" content="images/handpan_deniz.jpg">
+<meta name="theme-color" content="#E8E1D0">
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Sora:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --beige:#F5F2ED;
-    --beige-deep:#EDE6D9;
-    --terracotta:#D28A76;
-    --terracotta-deep:#B8664F;
-    --wood:#6F5950;
-    --charcoal:#333333;
+    --paper:#E8E1D0;
+    --paper-deep:#DCD2B9;
+    --ink:#221E18;
+    --ink-soft:rgba(34,30,24,0.68);
+    --ink-faint:rgba(34,30,24,0.45);
+    --forest:#2B362E;
+    --forest-deep:#1E271F;
+    --ivory:#F3EEE1;
+    --ivory-soft:rgba(243,238,225,0.72);
+    --brass:#A47F3E;
+    --brass-deep:#8A6A32;
+    --clay:#935E45;
+    --hair:rgba(34,30,24,0.14);
+    --hair-dark:rgba(243,238,225,0.16);
   }
   html{scroll-behavior:smooth;}
   body{
-    background-color:var(--beige);
-    color:var(--charcoal);
-    font-family:'Plus Jakarta Sans', sans-serif;
+    background-color:var(--paper);
+    color:var(--ink);
+    font-family:'Sora', sans-serif;
+    font-weight:300;
   }
-  .font-display{font-family:'Cinzel', serif;}
-  .text-terracotta{color:var(--terracotta);}
-  .bg-terracotta{background-color:var(--terracotta);}
-  .bg-terracotta-deep{background-color:var(--terracotta-deep);}
-  .bg-wood{background-color:var(--wood);}
-  .text-wood{color:var(--wood);}
-  .bg-beige-deep{background-color:var(--beige-deep);}
-  .border-wood{border-color:var(--wood);}
+  .font-display{font-family:'Fraunces', serif; font-optical-sizing:auto;}
+  .font-mono{font-family:'IBM Plex Mono', monospace;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.7rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--brass-deep);
+  }
+  .eyebrow-dark{color:#C9A768;}
 
-  .wave-divider{
-    width:100%;
-    height:60px;
-    display:block;
-  }
-  .wave-divider path{
-    fill:none;
-    stroke:var(--terracotta);
-    stroke-width:1.5;
-    stroke-linecap:round;
-    opacity:0.55;
-  }
+  .bg-forest{background-color:var(--forest);}
+  .bg-forest-deep{background-color:var(--forest-deep);}
+  .bg-paper-deep{background-color:var(--paper-deep);}
+  .text-ivory{color:var(--ivory);}
+  .text-brass{color:var(--brass);}
+  .border-hair{border-color:var(--hair);}
+  .border-hair-dark{border-color:var(--hair-dark);}
 
-  .nav-link{
-    position:relative;
-  }
-  .nav-link::after{
-    content:'';
-    position:absolute;
-    left:0; bottom:-4px;
-    width:0%;
-    height:1px;
-    background-color:var(--terracotta);
-    transition:width 0.35s ease;
-  }
+  /* Signature waveform divider — an unbroken thin line running the width of the page,
+     standing for each child's own frequency and pace. */
+  .wave-divider{width:100%; height:44px; display:block;}
+  .wave-divider path{fill:none; stroke:var(--brass); stroke-width:1; stroke-linecap:round; opacity:0.55;}
+  .wave-divider.on-dark path{stroke:#C9A768; opacity:0.4;}
+
+  .nav-link{position:relative; font-family:'IBM Plex Mono', monospace; font-size:0.72rem; letter-spacing:0.08em;}
+  .nav-link::after{content:''; position:absolute; left:0; bottom:-5px; width:0%; height:1px; background-color:var(--brass); transition:width 0.35s ease;}
   .nav-link:hover::after{width:100%;}
 
   .btn-primary{
-    transition:background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background-color:var(--ink);
+    color:var(--ivory);
+    transition:background-color 0.3s ease, transform 0.3s ease;
+    border-radius:2px;
   }
-  .btn-primary:hover{
-    background-color:var(--terracotta-deep);
-    transform:translateY(-2px);
-    box-shadow:0 10px 24px -8px rgba(178,80,60,0.45);
+  .btn-primary:hover{background-color:var(--brass-deep); transform:translateY(-1px);}
+
+  .btn-outline{
+    border:1px solid var(--ink);
+    color:var(--ink);
+    border-radius:2px;
+    transition:all 0.3s ease;
+  }
+  .btn-outline:hover{background-color:var(--ink); color:var(--ivory);}
+
+  .btn-outline-dark{
+    border:1px solid var(--ivory);
+    color:var(--ivory);
+    border-radius:2px;
+    transition:all 0.3s ease;
+  }
+  .btn-outline-dark:hover{background-color:var(--ivory); color:var(--forest-deep);}
+
+  /* Gallery-style frame instead of soft rounded card: thin hairline mat around the photo */
+  .art-frame{
+    padding:10px;
+    background-color:var(--paper);
+    border:1px solid rgba(164,127,62,0.35);
+  }
+  .art-frame img{display:block; border-radius:1px;}
+  .art-frame-dark{
+    padding:10px;
+    background-color:var(--forest);
+    border:1px solid rgba(201,167,104,0.28);
   }
 
-  ::selection{background-color:var(--terracotta); color:#fff;}
-
+  ::selection{background-color:var(--brass); color:#fff;}
   input:focus, textarea:focus, select:focus{
-    outline:none;
-    border-color:var(--terracotta);
-    box-shadow:0 0 0 3px rgba(210,138,118,0.18);
+    outline:none; border-color:var(--brass); box-shadow:0 0 0 2px rgba(164,127,62,0.18);
+  }
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--brass-deep); outline-offset:3px; border-radius:2px;
   }
 
-  #heroImageContainer, #philosophyImageContainer {
-    box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
-  }
+  .fact{border-left:1px solid var(--hair); padding-left:1.5rem;}
+  .fact-dark{border-left:1px solid var(--hair-dark); padding-left:1.5rem;}
 
   @media (prefers-reduced-motion: reduce){
     *{transition:none !important; scroll-behavior:auto !important;}
@@ -88,467 +124,445 @@
 <body class="antialiased" onclick="handleDocumentClick(event)">
 
 <!-- ===================== ARKA PLAN MÜZİK ÇALAR ===================== -->
-<audio id="bgMusic" src="images/webpagemusic_VS.mp3" loop preload="auto"></audio>
+<audio id="bgMusic" src="images/webpagemusic_VS.mp3" loop preload="none"></audio>
 
 <!-- ===================== NAV ===================== -->
-<header class="fixed top-0 left-0 right-0 z-50 bg-[#F5F2ED]/90 backdrop-blur-md border-b border-[#6F5950]/10">
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#E8E1D0]/90 backdrop-blur-md border-b border-hair">
   <nav class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-    <a href="#hero" class="font-display text-xl md:text-2xl tracking-wide text-wood">Seslerle Yolculuk</a>
+    <a href="#hero" class="font-display italic text-xl md:text-2xl tracking-wide" style="color:var(--ink)">Müzikle Yolculuk</a>
 
-    <ul class="hidden lg:flex items-center gap-9 text-sm tracking-wide text-[#333333]/80">
-      <li><a href="#kids" class="nav-link py-1">Oyunla Müzik</a></li>
-      <li><a href="#development" class="nav-link py-1">Gelişimsel Destek</a></li>
-      <li><a href="#philosophy-section" class="nav-link py-1">Felsefemiz</a></li>
-      <li><a href="#tendency" class="nav-link py-1">Eğilim Keşfi</a></li>
-      <li><a href="#philosophy" class="nav-link py-1">Metodoloji Farkı</a></li>
-      <li><a href="#faq" class="nav-link py-1">SSS</a></li>
-      <li><a href="#testimonials" class="nav-link py-1">Veli Yorumları</a></li>
-      <li><a href="#about" class="nav-link py-1">Eğitim ve Hikayemiz</a></li>
+    <ul class="hidden lg:flex items-center gap-8" style="color:var(--ink-soft)">
+      <li><a href="#philosophy-section" class="nav-link py-1">FELSEFEMİZ</a></li>
+      <li><a href="#tendency" class="nav-link py-1">ENSTRÜMANLAR</a></li>
+      <li><a href="#process" class="nav-link py-1">SÜREÇ</a></li>
+      <li><a href="#faq" class="nav-link py-1">S.S.S.</a></li>
+      <li><a href="#testimonials" class="nav-link py-1">YORUMLAR</a></li>
+      <li><a href="#about" class="nav-link py-1">YOLCULUĞUM</a></li>
     </ul>
 
     <div class="hidden md:flex items-center gap-3">
-      <!-- Müzik Kontrol Butonu -->
-      <button id="musicToggleBtn" onclick="toggleMusic()" aria-label="Müziği Durdur/Başlat" class="bg-white/80 hover:bg-terracotta hover:text-white text-wood border border-[#6F5950]/20 p-2.5 rounded-full flex items-center justify-center transition-all shadow-sm" title="Müziği Aç/Kapat">
-        <svg id="musicIcon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+      <button id="musicToggleBtn" onclick="toggleMusic(event)" aria-label="Arka plan müziğini başlat" aria-pressed="false" class="border border-hair hover:border-[var(--brass)] p-2.5 rounded-full flex items-center justify-center transition-all" title="Arka plan müziğini aç" style="color:var(--ink)">
+        <svg id="musicIcon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
       </button>
-      <a href="#connect" class="btn-primary inline-flex items-center bg-terracotta text-white text-sm px-6 py-2.5 rounded-full tracking-wide">Tanışma Görüşmesi</a>
+      <a href="#connect" class="btn-primary inline-flex items-center font-mono text-xs tracking-wide px-6 py-3 uppercase">Görüşme Talebi</a>
     </div>
 
-    <button id="menuBtn" class="lg:hidden text-wood" aria-label="Menüyü aç">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    <button id="menuBtn" class="lg:hidden" aria-label="Menüyü aç" style="color:var(--ink)">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </nav>
 
-  <div id="mobileMenu" class="lg:hidden hidden flex-col bg-[#F5F2ED] border-t border-[#6F5950]/10 px-6 py-6 gap-5 text-[#333333]/85">
-    <a href="#kids" class="mobile-link py-1">Oyunla Müzik</a>
-    <a href="#development" class="mobile-link py-1">Gelişimsel Destek</a>
-    <a href="#philosophy-section" class="mobile-link py-1">Felsefemiz</a>
-    <a href="#tendency" class="mobile-link py-1">Eğilim Keşfi</a>
-    <a href="#philosophy" class="mobile-link py-1">Metodoloji Farkı</a>
-    <a href="#faq" class="mobile-link py-1">SSS</a>
-    <a href="#testimonials" class="mobile-link py-1">Veli Yorumları</a>
-    <a href="#about" class="mobile-link py-1">Eğitim ve Hikayemiz</a>
-    <div class="flex items-center justify-between pt-2 border-t border-[#6F5950]/10">
-      <span class="text-xs text-wood font-medium">Arka Plan Müziği</span>
-      <button onclick="toggleMusic()" class="bg-white text-wood border border-[#6F5950]/20 px-4 py-2 rounded-full text-xs font-medium">Müziği Aç/Kapat</button>
+  <div id="mobileMenu" class="lg:hidden hidden flex-col bg-[#E8E1D0] border-t border-hair px-6 py-6 gap-5 font-mono text-xs tracking-wide" style="color:var(--ink-soft)">
+    <a href="#philosophy-section" class="mobile-link py-1">FELSEFEMİZ</a>
+    <a href="#tendency" class="mobile-link py-1">ENSTRÜMANLAR</a>
+    <a href="#process" class="mobile-link py-1">SÜREÇ</a>
+    <a href="#faq" class="mobile-link py-1">S.S.S.</a>
+    <a href="#testimonials" class="mobile-link py-1">YORUMLAR</a>
+    <a href="#about" class="mobile-link py-1">YOLCULUĞUM</a>
+    <div class="flex items-center justify-between pt-3 border-t border-hair">
+      <span style="color:var(--ink)">Arka Plan Müziği</span>
+      <button onclick="toggleMusic(event)" class="border border-hair px-4 py-2 rounded-full">AÇ / KAPAT</button>
     </div>
-    <a href="#connect" class="btn-primary inline-flex justify-center bg-terracotta text-white px-6 py-2.5 rounded-full mt-2">Tanışma Görüşmesi</a>
+    <a href="#connect" class="btn-primary inline-flex justify-center px-6 py-3 mt-2 uppercase">Görüşme Talebi</a>
   </div>
 </header>
 
 <!-- ===================== HERO ===================== -->
-<section id="hero" class="pt-40 pb-24 md:pt-52 md:dp-32 px-6 md:px-10">
-  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-10 items-center">
+<section id="hero" class="pt-40 pb-24 md:pt-52 md:pb-28 px-6 md:px-10">
+  <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 md:gap-16 items-center">
     <div>
-      <h1 class="font-display text-[2.5rem] leading-[1.12] md:text-5xl md:leading-[1.08] text-[#333333] mb-6">
-        Müziğin neşesiyle büyüyen, odaklanan ve özgüvenle kendilerini ifade eden çocuklar...
+      <p class="eyebrow mb-6">Birebir Müzik Seansları · 3–13 Yaş</p>
+      <h1 class="font-display text-[2.35rem] leading-[1.15] md:text-[3rem] md:leading-[1.12] mb-6" style="color:var(--ink)">
+        Her çocuğun kendi sesi, kendi ritmi vardır. <span class="italic" style="color:var(--clay)">Biz onu birlikte buluyoruz.</span>
       </h1>
-      
-      <p class="text-base md:text-lg text-[#333333]/70 max-w-md mb-8 leading-relaxed">
-        Çeyrek asırlık birikimle; her çocuğun kendi benzersiz temposunda, oyun temelli müzik yaklaşımıyla odaklandığı, içindeki potansiyeli keşfederek müzikle ömür boyu sürecek bir bağ kurduğu birebir seanslar. Handpan, arp, flüt, gitar, kalimba, ukulele ve xylophone gibi zengin enstrüman seçenekleriyle çocuğunuzun ilgisine göre şekillenen bir keşif alanı.
+
+      <p class="text-base md:text-lg max-w-md mb-8 leading-relaxed" style="color:var(--ink-soft)">
+        Handpan, arp, flüt, gitar, kalimba, ukulele ve ksilofonun eşlik ettiği; çocuğunuzun kendi temposunda ilerlediği, birebir ve baskısız bir müzik deneyimi. Odaklanma, özgüvenli ifade ve müzikle kurulan, ömür boyu sürecek bir bağ için tasarlandı.
       </p>
 
-      <div class="flex flex-wrap items-center gap-3 mb-8">
-        <a href="#tendency" class="btn-primary bg-wood text-white px-6 py-3 rounded-full tracking-wide text-xs md:text-sm font-medium">Enstrüman ve Eğilim Keşfi &rarr;</a>
-        <a href="#connect" class="btn-primary bg-terracotta text-white px-6 py-3 rounded-full tracking-wide text-xs md:text-sm">Tanışma Görüşmesi</a>
+      <div class="flex flex-wrap items-center gap-5 mb-10">
+        <a href="#connect" class="btn-primary inline-flex items-center font-mono text-xs tracking-wide px-7 py-3.5 uppercase">Görüşme Talebinde Bulunun</a>
+        <a href="#tendency" class="text-sm tracking-wide border-b pb-1 transition-colors" style="color:var(--ink); border-color:var(--ink-faint)">Enstrüman keşfini okuyun &rarr;</a>
       </div>
-      
-      <div class="flex flex-wrap gap-2 pt-2 border-t border-[#6F5950]/10">
-        <a href="#kids" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">Oyunla Müzik</a>
-        <a href="#development" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">Gelişimsel destek</a>
-        <a href="#philosophy-section" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">Felsefemiz</a>
-        <a href="#philosophy" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">Metodoloji farkı</a>
-        <a href="#faq" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">S.S.S.</a>
-        <a href="#testimonials" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">Veli yorumları</a>
-        <a href="#about" class="text-xs text-[#333333]/70 hover:text-terracotta transition-colors py-1 px-2 bg-white/50 rounded-md">Hikayemiz</a>
-      </div>
+
+      <p class="font-mono text-xs pt-5 border-t border-hair" style="color:var(--ink-faint); letter-spacing:0.03em;">
+        Şu an sınırlı sayıda aileyle, ayda iki özel seans üzerinden çalışıyorum.
+      </p>
     </div>
 
-    <div class="flex justify-center">
-      <div id="heroImageContainer" 
-           class="w-full max-w-md relative cursor-zoom-in group overflow-hidden rounded-2xl aspect-[5/4]"
-           onclick="openModal('images/handpan_deniz.jpg', 'Handpan ile çocuk müzik seansı')">
-        <img src="images/handpan_deniz.jpg" alt="Handpan ile çocuk müzik seansı" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.08]">
+    <div class="flex justify-center relative">
+      <div class="absolute -inset-6 hidden md:block" aria-hidden="true">
+        <svg width="100%" height="100%" viewBox="0 0 500 400" preserveAspectRatio="none">
+          <path d="M0,340 C60,300 90,380 150,340 C210,300 240,380 300,340 C360,300 390,380 450,340 C470,325 485,345 500,335" fill="none" stroke="var(--brass)" stroke-width="1" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="art-frame w-full max-w-md relative">
+        <div class="relative cursor-zoom-in group overflow-hidden aspect-[5/4]" onclick="openModal('images/handpan_deniz.jpg', 'Handpan ile çocuk müzik seansı')">
+          <img src="images/handpan_deniz.jpg" alt="Handpan ile çocuk müzik seansı" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]">
+        </div>
       </div>
     </div>
   </div>
 
-  <svg class="wave-divider max-w-5xl mx-auto mt-20" viewBox="0 0 1200 60" preserveAspectRatio="none">
-    <path d="M0,30 C150,-10 300,70 450,30 C600,-10 750,70 900,30 C1000,5 1100,55 1200,30"/>
+  <svg class="wave-divider max-w-5xl mx-auto mt-20" viewBox="0 0 1200 44" preserveAspectRatio="none">
+    <path d="M0,22 C100,4 200,40 300,22 C400,4 500,40 600,22 C700,4 800,40 900,22 C1000,10 1100,34 1200,22"/>
   </svg>
+</section>
+
+<!-- ===================== BUTİK YAKLAŞIM ===================== -->
+<section id="approach" class="py-20 md:py-24 px-6 md:px-10 bg-paper-deep">
+  <div class="max-w-5xl mx-auto">
+    <p class="eyebrow mb-5 text-center">Butik Bir Yaklaşım</p>
+    <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-center mb-6" style="color:var(--ink)">Seri değil; özenle.</h2>
+    <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-center mb-14" style="color:var(--ink-soft)">
+      Müzikle Yolculuk, geniş bir öğrenci kitlesine hizmet vermek üzere kurulmadı. Aynı anda yalnızca on çocukla, ayda iki seans üzerinden birebir çalışıyorum; böylece her çocuğun sesini, ilgisini ve tepkilerini gerçekten tanıyabiliyorum. Bu sınır bir pazarlama tercihi değil; dikkatin dağılmadığı, aceleye getirilmeyen bir alan yaratmanın doğal sonucu.
+    </p>
+
+    <div class="grid sm:grid-cols-3 gap-8 max-w-3xl mx-auto">
+      <div class="fact">
+        <p class="eyebrow mb-2">Kontenjan</p>
+        <p class="font-display text-2xl" style="color:var(--ink)">10 çocuk</p>
+      </div>
+      <div class="fact">
+        <p class="eyebrow mb-2">Seans Sıklığı</p>
+        <p class="font-display text-2xl" style="color:var(--ink)">Ayda 2</p>
+      </div>
+      <div class="fact">
+        <p class="eyebrow mb-2">Format</p>
+        <p class="font-display text-2xl" style="color:var(--ink)">Birebir</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- ===================== FEATURE 1: OYUNLA MÜZİK ===================== -->
 <section id="kids" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
     <div class="order-2 md:order-1 flex justify-center">
-      <div class="w-full max-w-md relative cursor-zoom-in group overflow-hidden rounded-2xl aspect-[5/4]"
-           onclick="openModal('images/kid2.jpg', 'Çocuk müzik seansı')">
-        <img src="images/kid2.jpg" alt="Çocuk müzik seansı" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.08]">
+      <div class="art-frame w-full max-w-md">
+        <div class="relative cursor-zoom-in group overflow-hidden aspect-[5/4]" onclick="openModal('images/kid2.jpg', 'Çocuk müzik seansı')">
+          <img src="images/kid2.jpg" alt="Çocuk müzik seansı" loading="lazy" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.05]">
+        </div>
       </div>
     </div>
 
     <div class="order-1 md:order-2">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Yaş 3&ndash;13 &middot; Birebir ve Özel Yaklaşım</p>
-      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-[#333333] mb-6">Oyun Temelli Müzik Yaklaşımı İle Birebir Seanslar</h2>
-      <p class="text-[#333333]/70 leading-relaxed mb-6 max-w-lg">
-        Her seans çocuğunuzun kendi temposuna, dikkat süresine, merakına ve sesine göre şekillenir. Ritim, hareket, özel enstrümanlar çocuğun bir zorlama ya da baskı olmadan müzikle bağ kurmasına yardımcı olur.
+      <p class="eyebrow mb-5">3–13 Yaş · Birebir ve Özel Yaklaşım</p>
+      <h2 class="font-display text-3xl md:text-[2.2rem] leading-tight mb-6" style="color:var(--ink)">Oyun Temelli Bir Müzik Dili</h2>
+      <p class="leading-relaxed mb-6 max-w-lg" style="color:var(--ink-soft)">
+        Her seans çocuğunuzun kendi temposuna, dikkat süresine, merakına ve sesine göre şekillenir. Ritim, hareket ve özenle seçilmiş enstrümanlar; çocuğun herhangi bir zorlama ya da baskı hissetmeden müzikle kendi bağını kurmasına alan açar.
       </p>
-      <ul class="space-y-3 text-[#333333]/80 mb-8">
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Tamamen kişiselleştirilmiş seans akışı</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Beden perküsyonu, vurmalı çalgılar ve şarkı söyleme</li>
+      <ul class="space-y-3 mb-8" style="color:var(--ink)">
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Tamamen kişiselleştirilmiş seans akışı</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Beden perküsyonu, vurmalı çalgılar ve şarkı söyleme</li>
       </ul>
-      <div class="flex flex-wrap items-center gap-4">
-        <a href="#connect" class="text-wood text-sm tracking-wide border-b border-wood/40 pb-1 hover:border-terracotta hover:text-terracotta transition-colors">Çocuğunuz için ilk adımı atın &rarr;</a>
-        <a href="#development" class="btn-primary bg-[#EDE6D9] text-wood border border-wood/20 px-5 py-2 rounded-full text-xs tracking-wide font-medium">Gelişimsel Destek</a>
-      </div>
+      <a href="#connect" class="text-sm tracking-wide border-b pb-1 transition-colors" style="color:var(--ink); border-color:var(--ink-faint)">Çocuğunuz için ilk adımı atın &rarr;</a>
     </div>
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
-</svg>
-
-<!-- ===================== FEATURE 2: DEVELOPMENT (GELİŞİMSEL DESTEK) ===================== -->
-<section id="development" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/30">
+<!-- ===================== FEATURE 2: GELİŞİMSEL DESTEK ===================== -->
+<section id="development" class="py-20 md:py-28 px-6 md:px-10 bg-paper-deep">
   <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
     <div>
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Gelişimsel Destek</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Konuşmayı, dikkati ve ifadeyi desteklemek</h2>
-      <p class="text-[#333333]/70 leading-relaxed mb-6 max-w-lg">
-        Müzik ve oyun temelli müzik yaklaşımının doğası; dikkat dağınıklığı ya da ifade zorluğu yaşayan çocukların dünyasında, kelimelerin tek başına ulaşamadığı noktalara dokunur. Seanslar; oyun, ritim ve bedensel hareketler aracılığıyla odaklanmayı güçlendirmek, sözlü ifadeyi teşvik etmek ve günlük hayata taşınacak aktif dinleme becerisini kazandırmak için özel olarak yapılandırılmıştır.
+      <p class="eyebrow mb-5">Gelişimsel Destek</p>
+      <h2 class="font-display text-3xl md:text-[2.2rem] leading-tight mb-6" style="color:var(--ink)">Konuşmayı, Dikkati ve İfadeyi Desteklemek</h2>
+      <p class="leading-relaxed mb-6 max-w-lg" style="color:var(--ink-soft)">
+        Oyun temelli müzik yaklaşımının doğası; dikkat dağınıklığı ya da ifade zorluğu yaşayan çocukların dünyasında, kelimelerin tek başına ulaşamadığı noktalara dokunur. Seanslar; oyun, ritim ve bedensel hareketler aracılığıyla odaklanmayı güçlendirmek, sözlü ifadeyi teşvik etmek ve günlük hayata taşınacak aktif dinleme becerisini kazandırmak için özenle yapılandırılır.
       </p>
-      <ul class="space-y-3 text-[#333333]/80 mb-8">
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Oyun temelli soru-cevap ve ritim oyunlarıyla geliştirilen dikkat</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Şarkılar ve beden perküsyonuyla örülen konuşma & artikülasyon</li>
-        <li class="flex gap-3"><span class="text-terracotta mt-1">&#8226;</span>Emprovizasyon yoluyla güvenli ve sağlıklı duygusal ifade alanı</li>
+      <ul class="space-y-3 mb-8" style="color:var(--ink)">
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Oyun temelli soru-cevap ve ritim oyunlarıyla geliştirilen dikkat</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Şarkılar ve beden perküsyonuyla örülen konuşma ve artikülasyon</li>
+        <li class="flex gap-3"><span class="mt-1" style="color:var(--brass)">&#8226;</span>Doğaçlama yoluyla güvenli ve sağlıklı bir duygusal ifade alanı</li>
       </ul>
-      <a href="#connect" class="text-wood text-sm tracking-wide border-b border-wood/40 pb-1 hover:border-terracotta hover:text-terracotta transition-colors">Çocuğunuz için ilk adımı atın &rarr;</a>
+      <a href="#connect" class="text-sm tracking-wide border-b pb-1 transition-colors" style="color:var(--ink); border-color:var(--ink-faint)">Çocuğunuz için ilk adımı atın &rarr;</a>
     </div>
 
-    <div>
-      <div onclick="openModal('images/childdev1.jpg', 'Çocuk gelişim müzik seansı')" class="overflow-hidden w-full text-left cursor-zoom-in group relative rounded-2xl shadow-sm">
-        <img src="images/childdev1.jpg" alt="Çocuk gelişim müzik seansı" class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300">
+    <div class="art-frame">
+      <div onclick="openModal('images/childdev1.jpg', 'Çocuk gelişim müzik seansı')" class="overflow-hidden w-full text-left cursor-zoom-in group relative">
+        <img src="images/childdev1.jpg" alt="Çocuk gelişim müzik seansı" loading="lazy" class="w-full h-auto object-cover group-hover:scale-[1.04] transition-transform duration-700">
       </div>
     </div>
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,-10 300,70 450,30 C600,-10 750,70 900,30 C1000,5 1100,55 1200,30"/>
+<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 44" preserveAspectRatio="none">
+  <path d="M0,22 C100,40 200,4 300,22 C400,40 500,4 600,22 C700,40 800,4 900,22 C1000,32 1100,10 1200,22"/>
 </svg>
 
-<!-- ===================== BÖLÜM: FELSEFEMİZ ===================== -->
-<section id="philosophy-section" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/40">
-  <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Felsefemiz</p>
-      <h2 class="font-display text-3xl md:text-[2.5rem] leading-tight text-[#333333] mb-6">Oyun Temelli Müzik Yaklaşımı</h2>
-      <p class="text-[#333333]/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-        Çocukların dünyasında öğrenmenin en ana dili oyundur. Oyun temelli müzik yaklaşımı; sesleri, ritmi, hareketi ve doğaçlamayı bir araya getirerek müziği kuru bir ders olmaktan çıkarır, çocuğun içsel dünyasına hitap eden yaşayan bir deneyime dönüştürür.
+<!-- ===================== BÖLÜM: FELSEFEMİZ (DARK) ===================== -->
+<section id="philosophy-section" class="py-20 md:py-28 px-6 md:px-10 bg-forest">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="eyebrow eyebrow-dark mb-5">Felsefemiz</p>
+    <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-ivory mb-8">Oyun Temelli Müzik Yaklaşımı</h2>
+    <p class="font-display italic text-xl md:text-2xl leading-relaxed mb-14 text-ivory-soft">
+      &ldquo;Çocukların dünyasında öğrenmenin en ana dili oyundur. Bu yaklaşım, sesleri, ritmi, hareketi ve doğaçlamayı bir araya getirerek müziği kuru bir ders olmaktan çıkarır; çocuğun içsel dünyasına hitap eden, yaşayan bir deneyime dönüştürür.&rdquo;
+    </p>
+
+    <div class="text-left border border-hair-dark p-8 md:p-10">
+      <h3 class="font-display text-xl text-ivory mb-4">Dünyaca Kabul Görmüş Yaklaşımların Gücü</h3>
+      <p class="leading-relaxed text-sm md:text-base mb-4 text-ivory-soft">
+        Bu yaklaşımın temelinde, müzik eğitiminde çığır açmış köklü ekoller yer alır. Carl Orff'un beden perküsyonunu, ritmi ve konuşmayı merkeze alan Orff metodu; Zoltán Kodály'in sesin ve işitmenin doğallığını savunan felsefesi; Émile Jaques-Dalcroze'un beden hareketleriyle müziği hissettiren ritmik hareket sistemi ve Maria Montessori'nin çocuğun özgür keşfine duyduğu saygı, bu ekosistemin yapı taşlarını oluşturur.
       </p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
-      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-xl text-[#333333] mb-4">Dünyaca Kabul Görmüş Yaklaşımların Gücü</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base mb-4">
-          Bu yaklaşımın temelinde, müzik eğitiminde çığır açmış köklü ekoller yer alır. Carl Orff’un beden perküsyonunu, ritmi ve konuşmayı merkeze alan Orff metodu; Zoltán Kodály’in sesin ve işitmenin doğallığını savunan felsefesi; Émile Jaques-Dalcroze’un beden hareketleriyle müziği hissettiren ritmik hareket sistemi ve María Montessori’nin çocuğun özgür keşfine duyduğu saygı bu ekosistemin yapı taşlarını oluşturur.
-        </p>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
-          Bu metodların ortak noktası, çocuğa dışarıdan bilgi dayatmak yerine, onun içindeki ritmi ve yaratıcılığı oyun yoluyla uyandırmaktır.
-        </p>
-      </div>
-
-      <div class="bg-wood text-[#F5F2ED] p-8 rounded-2xl shadow-md">
-        <h3 class="font-display text-xl text-white mb-4">25 Yıllık Tecrübe ile Özgün Sentez</h3>
-        <p class="text-[#F5F2ED]/85 leading-relaxed text-sm md:text-base mb-4">
-          Volkan Susüzer'in 25 yıllık derin müzikal birikimi; ODTÜ Makine Mühendisliği’nden aldığı analitik formasyon, ODTÜ Tiyatro Topluluğu’ndaki sahne deneyimi ve üç farklı ülkede yaşadığı kültürel zenginlikle harmanlıyor. Farklı kültürlerden müzisyenlerle kurduğu bağlar, Volkan’a müziğin evrensel dilini kültürler ötesi bir köprü olarak görme ve hissetme imkânı verdi.
-        </p>
-        <p class="text-[#F5F2ED]/85 leading-relaxed text-sm md:text-base">
-          Bu özgün sentezle, müziğin ritimdeki matematiği, düzeni ve doğal akışı çocuklara sezdirerek aktarıyor. Her çocuğun kendi ritmine ve merakına uyum sağlayan, handpan’den yan flüte uzanan zengin enstrümanlarla desteklenen bu yolculuk, çocuklar için müziği bütünsel olarak hissedilen bir deneyime dönüştürüyor.
-        </p>
-      </div>
-    </div>
-
-    <div class="text-center">
-      <a href="#connect" class="btn-primary inline-block bg-terracotta text-white px-8 py-3.5 rounded-full text-sm tracking-wide">Bu özgün yaklaşımı çocuğunuzla birlikte deneyimleyin</a>
+      <p class="leading-relaxed text-sm md:text-base text-ivory-soft">
+        Bu yöntemlerin ortak noktası, çocuğa dışarıdan bilgi dayatmak yerine, onun içindeki ritmi ve yaratıcılığı oyun yoluyla uyandırmaktır.
+      </p>
     </div>
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
+<svg class="wave-divider on-dark max-w-5xl mx-auto bg-forest" viewBox="0 0 1200 44" preserveAspectRatio="none">
+  <path d="M0,22 C100,4 200,40 300,22 C400,4 500,40 600,22 C700,4 800,40 900,22 C1000,10 1100,34 1200,22"/>
 </svg>
 
-<!-- ===================== BÖLÜM: ÇOCUĞUMUN EĞİLİMİNİ NASIL BİLECEĞİZ? ===================== -->
-<section id="tendency" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/30">
+<!-- ===================== BÖLÜM: ENSTRÜMAN KEŞFİ ===================== -->
+<section id="tendency" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Enstrüman ve İlgi Keşfi</p>
-      <h2 class="font-display text-3xl md:text-[2.5rem] leading-tight text-[#333333] mb-6">Çocuğunuzun Dünyasına Hitap Eden Zengin Enstrüman Çeşitliliği</h2>
-      <p class="text-[#333333]/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-        Handpan, arp, flüt, gitar, kalimba, ukulele ve xylophone gibi eşsiz ses dokularına sahip enstrümanlar eşliğinde, çocuğun doğal merakının hangi sese yöneldiğini birlikte keşfediyoruz.
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-5">Enstrüman ve İlgi Keşfi</p>
+      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight mb-6" style="color:var(--ink)">Çocuğunuzun Dünyasına Hitap Eden Zengin Bir Ses Paleti</h2>
+      <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style="color:var(--ink-soft)">
+        Handpan, arp, flüt, gitar, kalimba, ukulele ve ksilofon gibi eşsiz ses dokularına sahip enstrümanlar eşliğinde, çocuğunuzun doğal merakının hangi sese yöneldiğini birlikte keşfediyoruz.
       </p>
     </div>
 
-    <div class="max-w-4xl mx-auto mb-12">
-      <div class="relative rounded-3xl overflow-hidden shadow-xl border border-[#6F5950]/15 bg-[#EDE6D9] group">
-        <img src="images/instruments_discovery.jpg" alt="Handpan, yan flüt, kalimba, gitar, ukulele, xylophone ve arp enstrümanları" class="w-full h-auto object-cover cursor-zoom-in transition-transform duration-500 group-hover:scale-[1.03]" onclick="openModal(this.src, this.alt)">
-        
-        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#333333]/80 via-[#333333]/40 to-transparent p-6 md:p-8 flex flex-col justify-end">
-          <p class="text-white/90 font-display text-lg md:text-xl tracking-wide mb-1">Müziğin Zengin Tonları</p>
-          <p class="text-white/75 text-xs md:text-sm font-light">Handpan, arp, flüt, gitar, kalimba, ukulele ve xylophone ile çocuğunuzun doğasına en uygun sesi birlikte keşfediyoruz.</p>
+    <div class="art-frame max-w-4xl mx-auto mb-12">
+      <div class="relative overflow-hidden group">
+        <img src="images/instruments_discovery.jpg" alt="Handpan, yan flüt, kalimba, gitar, ukulele, ksilofon ve arp enstrümanları" loading="lazy" class="w-full h-auto object-cover cursor-zoom-in transition-transform duration-700 group-hover:scale-[1.03]" onclick="openModal(this.src, this.alt)">
+        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#221E18]/85 via-[#221E18]/35 to-transparent p-6 md:p-8 flex flex-col justify-end">
+          <p class="text-ivory font-display italic text-lg md:text-xl mb-1">Müziğin Zengin Tonları</p>
+          <p class="text-ivory-soft text-xs md:text-sm">Her biri farklı bir ses dokusu taşıyan bu enstrümanlarla çocuğunuzun doğasına en uygun sesi birlikte keşfediyoruz.</p>
         </div>
       </div>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
-      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-xl text-[#333333] mb-4">İlk Buluşmalar Nasıl İlerler?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base mb-4">
-          Çocukların müzikal refleksleri, doğru bir rehberlik ve oyun ortamında ilk birkaç seans içinde net bir şekilde gün yüzüne çıkar. Çocuğun hangi enstrumanlara ilgi duyduğu bu süreçte kendini gösterir.
+    <div class="grid md:grid-cols-2 gap-8 items-stretch mb-12">
+      <div class="bg-[#F3EEE1] p-8 border border-hair">
+        <h3 class="font-display text-xl mb-4" style="color:var(--ink)">İlk Buluşmalar Nasıl İlerler?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Çocukların müzikal refleksleri, doğru bir rehberlik ve oyun ortamında ilk birkaç seans içinde net bir şekilde gün yüzüne çıkar. Çocuğun hangi enstrümanlara ilgi duyduğu bu süreçte kendini gösterir.
         </p>
       </div>
 
-      <div class="bg-wood text-[#F5F2ED] p-8 rounded-2xl shadow-md">
-        <h3 class="font-display text-xl text-white mb-4">Müzikal Yol Haritası</h3>
-        <ul class="space-y-4 text-[#F5F2ED]/85 text-sm md:text-base">
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> <strong>Çeşitlilik ve Keşif:</strong> Handpan, arp, flüt, gitar, kalimba, ukulele ve xylophone ile zenginleştirilmiş seans ortamı.</li>
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> <strong>Çocuğun Seçimi:</strong> Baskı olmadan, tamamen çocuğun ilgisine ve merakına göre şekillenen enstrüman odağı.</li>
-          <li class="flex gap-3"><span class="text-terracotta font-bold shrink-0">&#10003;</span> <strong>Esnek Alan:</strong> İhtiyaç duyulduğunda enstrümanlar arasında keyifli ve akışkan geçişler.</li>
+      <div class="bg-forest p-8">
+        <h3 class="font-display text-xl text-ivory mb-4">Müzikal Yol Haritası</h3>
+        <ul class="space-y-4 text-sm md:text-base text-ivory-soft">
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#C9A768">&#10003;</span> <strong class="text-ivory">Çeşitlilik ve Keşif:</strong> Zengin ses dokularıyla desteklenmiş, keşfe açık bir seans ortamı.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#C9A768">&#10003;</span> <strong class="text-ivory">Çocuğun Seçimi:</strong> Baskı olmadan, tamamen çocuğun ilgisine göre şekillenen enstrüman odağı.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:#C9A768">&#10003;</span> <strong class="text-ivory">Esnek Alan:</strong> İhtiyaç duyulduğunda enstrümanlar arasında keyifli ve akışkan geçişler.</li>
         </ul>
       </div>
     </div>
 
     <div class="text-center">
-      <a href="#connect" class="btn-primary inline-block bg-terracotta text-white px-8 py-3.5 rounded-full text-sm tracking-wide">Çocuğunuzun enstrüman eğilimini birlikte keşfedelim</a>
+      <a href="#connect" class="btn-outline inline-block font-mono text-xs tracking-wide px-8 py-3.5 uppercase">Enstrüman Eğilimini Birlikte Keşfedelim</a>
     </div>
   </div>
 </section>
-
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
-</svg>
 
 <!-- ===================== NEDEN FARKIYIZ? ===================== -->
-<section id="philosophy" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/50">
+<section id="philosophy" class="py-20 md:py-28 px-6 md:px-10 bg-paper-deep">
   <div class="max-w-5xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Metodoloji & Yaklaşım Farkı</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Geleneksel Müzik Eğitimi Neden Erken Yaşta Verimsiz, Hatta Müzikten Uzaklaştırıcı Bir Etki Yapabilir?</h2>
-      <p class="text-[#333333]/70 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-        Standart müzik metotları başarısız oldukları için değil; genellikle daha ileri yaşların bilişsel dünyalarına göre tasarlandıkları için çocukluk döneminde eksik kalır ve verimsiz, hatta müzikten uzaklaştırıcı bir etki yapabilir. Oysa büyüme çağındaki çocuklar için enstrüman seçimi, oyun ve serbest yaratıcı alan hayati önem taşır.
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-5">Metodoloji ve Yaklaşım Farkı</p>
+      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight mb-6" style="color:var(--ink)">Geleneksel Müzik Eğitimi Neden Erken Yaşta Yetersiz Kalabilir?</h2>
+      <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto" style="color:var(--ink-soft)">
+        Standart müzik metotları başarısız oldukları için değil; genellikle daha ileri yaşların bilişsel dünyasına göre tasarlandıkları için çocukluk döneminde eksik kalır. Oysa büyüme çağındaki çocuklar için enstrüman seçimi, oyun ve serbest yaratıcı alan hayati önem taşır.
       </p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8 mb-16">
-      <div class="bg-white p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <div class="text-terracotta font-display text-xl mb-4">Geleneksel / Standart Metotların Sınırları</div>
-        <ul class="space-y-4 text-[#333333]/75 text-sm md:text-base">
-          <li class="flex gap-3"><span class="text-wood font-bold shrink-0">&bull;</span> 13 yaş ve üzeri soyut düşünce dönemine göre tasarlandığı için erken yaşta ezbere ve nota okumaya dayalıdır.</li>
-          <li class="flex gap-3"><span class="text-wood font-bold shrink-0">&bull;</span> Tek tip enstrüman zorunluluğu getirir; çocukların kendi seslerini ve bedenlerini keşfetme alanını daraltır.</li>
-          <li class="flex gap-3"><span class="text-wood font-bold shrink-0">&bull;</span> Performans baskısı yaratarak çocukları erken yaşta müzikten soğutma riski taşır.</li>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-[#F3EEE1] p-8 border border-hair">
+        <div class="font-display italic text-lg mb-4" style="color:var(--ink-soft)">Geleneksel / Standart Metotların Sınırları</div>
+        <ul class="space-y-4 text-sm md:text-base" style="color:var(--ink-soft)">
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> 13 yaş ve üzeri soyut düşünce dönemine göre tasarlandığı için erken yaşta ezbere ve nota okumaya dayalıdır.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> Tek tip enstrüman zorunluluğu getirir; çocukların kendi seslerini ve bedenlerini keşfetme alanını daraltır.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0" style="color:var(--ink-faint)">&bull;</span> Performans baskısı yaratarak çocukları erken yaşta müzikten soğutma riski taşır.</li>
         </ul>
       </div>
 
-      <div class="bg-[#EDE6D9] text-[#333333] p-8 rounded-2xl border border-[#6F5950]/20 shadow-md">
-        <div class="text-terracotta-deep font-display text-xl mb-4">Seslerle Yolculuk & Oyun Temelli Yaklaşım</div>
-        <ul class="space-y-4 text-[#333333]/90 text-sm md:text-base">
-          <li class="flex gap-3"><span class="text-terracotta-deep font-bold shrink-0">&#10003;</span> Tamamen 3&ndash;13 yaş aralığının somut öğrenme dünyasına, dikkat süresine ve oyun ihtiyacına göre tasarlanmıştır.</li>
-          <li class="flex gap-3"><span class="text-terracotta-deep font-bold shrink-0">&#10003;</span> Doğru enstrüman seçimi, beden perküsyonu ve serbest yaratıcı (emprovizasyon) alan sağlar.</li>
-          <li class="flex gap-3"><span class="text-terracotta-deep font-bold shrink-0">&#10003;</span> Çocuğun içindeki potansiyeli baskılamadan, müzikle ömür boyu sürecek içsel ve neşeli bir bağ kurar.</li>
+      <div class="p-8 border" style="background-color:var(--ink); border-color:var(--ink)">
+        <div class="font-display italic text-lg mb-4 text-brass">Müzikle Yolculuk &amp; Oyun Temelli Yaklaşım</div>
+        <ul class="space-y-4 text-sm md:text-base text-ivory-soft">
+          <li class="flex gap-3"><span class="font-bold shrink-0 text-brass">&#10003;</span> Tamamen 3–13 yaş aralığının somut öğrenme dünyasına, dikkat süresine ve oyun ihtiyacına göre tasarlanmıştır.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0 text-brass">&#10003;</span> Doğru enstrüman seçimi, beden perküsyonu ve serbest doğaçlama alanı sağlar.</li>
+          <li class="flex gap-3"><span class="font-bold shrink-0 text-brass">&#10003;</span> Çocuğun içindeki potansiyeli baskılamadan, müzikle ömür boyu sürecek içsel ve neşeli bir bağ kurar.</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
-</svg>
+<!-- ===================== SÜREÇ (DARK) ===================== -->
+<section id="process" class="py-20 md:py-28 px-6 md:px-10 bg-forest">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="eyebrow eyebrow-dark mb-5">Başvurudan Sonra</p>
+      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-ivory mb-6">Birlikte Nasıl İlerliyoruz</h2>
+      <p class="text-base md:text-lg leading-relaxed max-w-2xl mx-auto text-ivory-soft">
+        Kontenjan sınırlı olduğu için her aileyle çalışmaya doğrudan başlamıyoruz; önce kısa bir süreçte birbirimizi tanıyoruz.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-px" style="background-color:rgba(243,238,225,0.16)">
+      <div class="p-8 bg-forest">
+        <span class="font-mono text-xs" style="color:#C9A768">01</span>
+        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Ön Görüşme</h3>
+        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğunuzu, beklentilerinizi ve merak ettiklerinizi konuştuğumuz kısa bir tanışma görüşmesi.</p>
+      </div>
+      <div class="p-8 bg-forest">
+        <span class="font-mono text-xs" style="color:#C9A768">02</span>
+        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Gözlem ve Değerlendirme</h3>
+        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğun tepkileri, enstrüman ilgisi ve odak süresinin bir deneme seansında gözlemlenmesi.</p>
+      </div>
+      <div class="p-8 bg-forest">
+        <span class="font-mono text-xs" style="color:#C9A768">03</span>
+        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Uyum Kararı</h3>
+        <p class="text-sm leading-relaxed text-ivory-soft">Bu yaklaşımın çocuğunuza gerçekten uygun olup olmadığına birlikte karar veriyoruz.</p>
+      </div>
+      <div class="p-8 bg-forest">
+        <span class="font-mono text-xs" style="color:#C9A768">04</span>
+        <h3 class="font-display text-lg text-ivory mt-2 mb-2">Program ve Seanslar</h3>
+        <p class="text-sm leading-relaxed text-ivory-soft">Çocuğunuza özel akışla, birebir ve sürdürülebilir müzik yolculuğunun başlaması.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ===================== SIKÇA SORULAN SORULAR (SSS) ===================== -->
-<section id="faq" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/50">
+<section id="faq" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-4xl mx-auto">
     <div class="text-center mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Merak Edilenler</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333]">Sıkça Sorulan Sorular</h2>
+      <p class="eyebrow mb-5">Merak Edilenler</p>
+      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight" style="color:var(--ink)">Sıkça Sorulan Sorular</h2>
     </div>
 
-    <div class="space-y-6">
-      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">1. Müzik seanslarının akışı ve içeriği hakkında bilgi verebilir misiniz?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
-          Seanslar, çocuğun kendi hızında ve baskıdan uzak bir ortamda seslerle, ritimlerle buluştuğu özgür bir keşif alanıdır. Çocuğun kendini güvende hissetmesi amacıyla süreç boyunca anne veya baba da stüdyoda yer alır. Sabit bir kalıp izlemek yerine çocuğun o anki akışına ve dikkat süresine odaklandığımız için seanslar genellikle 30 ile 60 dakika arasında sürer. Birlikte enstrümanları dener, seslerle oynar, bazen şarkı söyler ve beden hareketleriyle bu müzikal alanı tamamen doğal bir akışta kurarız.
+    <div class="space-y-5">
+      <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Müzik seanslarının akışı ve içeriği hakkında bilgi verebilir misiniz?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Seanslar, çocuğun kendi hızında ve baskıdan uzak bir ortamda seslerle, ritimlerle buluştuğu özgür bir keşif alanıdır. Çocuğun kendini güvende hissetmesi için süreç boyunca anne ya da baba da stüdyoda yer alır. Sabit bir kalıp izlemek yerine çocuğun o anki akışına ve dikkat süresine odaklandığımız için seanslar genellikle 30 ile 60 dakika arasında sürer.
         </p>
       </div>
 
-      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">2. Çocuğumun daha önce hiç müzik eğitimi veya enstrüman deneyimi yok, bu durum bir dezavantaj mı?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
-          Kesinlikle hayır. Aksine, geleneksel kurallarla henüz tanışmamış olmak çocuk için büyük bir avantajdır. Seslerle Yolculuk'ta kullandığımız oyun temelli müzik yaklaşımı, önceden bir bilgi veya beceri gerektirmez; çocukların içindeki doğal ritmi ve merakı oyun yoluyla uyandırmayı hedefler.
+      <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Çocuğumun daha önce hiç müzik eğitimi veya enstrüman deneyimi yok, bu durum bir dezavantaj mı?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Hayır; aksine, geleneksel kurallarla henüz tanışmamış olmak çocuk için bir avantajdır. Kullandığımız oyun temelli yaklaşım önceden bir bilgi ya da beceri gerektirmez; çocukların içindeki doğal ritmi ve merakı oyun yoluyla uyandırmayı hedefler.
         </p>
       </div>
 
-      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">3. Geleneksel enstrüman kurslarından (piyano, keman vb.) farkınız tam olarak nedir?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
-          Klasik kurslar genellikle nota ezberletme ve teknik baskı üzerine kuruludur. Erken yaş grubundaki çocukların somut öğrenme dünyasına ağır gelebilir. Biz ise oyun temelli yaklaşımın rehberliğinde çocukların doğru enstrümanı seçmesini, beden perküsyonunu, doğaçlamayı ve oyunun gücünü kullanarak müzikle içsel ve neşeli bir bağ kurmasını sağlıyoruz.
+      <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Geleneksel enstrüman kurslarından (piyano, keman vb.) farkınız tam olarak nedir?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Klasik kurslar genellikle nota ezberletme ve teknik baskı üzerine kuruludur; bu, erken yaş grubundaki çocukların somut öğrenme dünyasına ağır gelebilir. Biz oyun temelli yaklaşımın rehberliğinde çocukların doğru enstrümanı seçmesini, beden perküsyonunu ve doğaçlamayı kullanarak müzikle içsel ve neşeli bir bağ kurmasını sağlıyoruz.
         </p>
       </div>
 
-      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">4. Hangi enstrümanlarla çalışıyoruz ve çocuğumun hangisine ilgisi olduğunu nasıl belirliyoruz?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
-          Seanslarımızda handpan, arp, flüt, gitar, kalimba, ukulele ve xylophone gibi zengin enstrüman seçenekleri mevcuttur. Çocuğun bu enstrümanlar arasından hangisine ilgi duyduğu, hangi ses dokularından heyecanlandığı ilk birkaç seans içinde oyun ve keşif yoluyla kendiliğinden ortaya çıkar. Önceden sabit bir enstrüman seçmenize gerek yoktur.
+      <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Hangi enstrümanlarla çalışıyoruz ve çocuğumun hangisine ilgisi olduğunu nasıl belirliyoruz?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Seanslarımızda handpan, arp, flüt, gitar, kalimba, ukulele ve ksilofon gibi zengin enstrüman seçenekleri bulunur. Çocuğun bu enstrümanlar arasından hangisine ilgi duyduğu, ilk birkaç seans içinde oyun ve keşif yoluyla kendiliğinden ortaya çıkar. Önceden sabit bir enstrüman seçmenize gerek yoktur.
         </p>
       </div>
 
-      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">5. Seanslara başlamadan önce pahalı bir enstrüman satın almamız gerekiyor mu?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base">
-          Kesinlikle hayır. Sürecin başında herhangi bir enstrüman satın almanıza gerek yoktur. Çocuğun hangi enstrümana ilgi duyduğu netleşene ve müzikle bağı güçlenene kadar seanslardaki tüm enstrüman imkanları zaten sağlanmaktadır. İlerleyen süreçte evde çalışma ihtiyacı doğarsa, bütçenize ve çocuğun yönelimine en uygun yönlendirmeyi birlikte yaparız.
+      <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Seanslara başlamadan önce pahalı bir enstrüman satın almamız gerekiyor mu?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Hayır. Çocuğun hangi enstrümana ilgi duyduğu netleşene kadar tüm enstrüman imkanları seanslarda zaten sağlanır. İlerleyen süreçte evde çalışma ihtiyacı doğarsa, bütçenize ve çocuğun yönelimine en uygun yönlendirmeyi birlikte yaparız.
         </p>
       </div>
 
-      <div class="bg-white p-6 md:p-8 rounded-2xl border border-[#6F5950]/10 shadow-sm">
-        <h3 class="font-display text-lg md:text-xl text-[#333333] mb-3">6. Başvuru sonrasında süreç ve seanslar nasıl ilerliyor?</h3>
-        <p class="text-[#333333]/75 leading-relaxed text-sm md:text-base mb-4">
-          İletişim kurduktan sonra yol haritamız 4 temel adımdan oluşur:
+      <div class="bg-[#F3EEE1] p-6 md:p-8 border border-hair">
+        <h3 class="font-display text-lg mb-3" style="color:var(--ink)">Kontenjan doluyken bir başvuru yapabilir miyim?</h3>
+        <p class="leading-relaxed text-sm md:text-base" style="color:var(--ink-soft)">
+          Evet. Kontenjan on çocukla sınırlı olduğundan, zaman zaman kısa bir bekleme süreci oluşabilir. Bu durumda başvurunuzu değerlendirme sırasına alır ve bir yer açıldığında açıkça bilgilendiririz.
         </p>
-        
-        <div class="grid sm:grid-cols-2 gap-4 mt-4">
-          <div class="bg-[#EDE6D9]/40 p-4 rounded-xl border border-[#6F5950]/10 flex flex-col justify-between">
-            <span class="text-terracotta font-display font-bold text-sm mb-1">Adım 01</span>
-            <div>
-              <strong class="text-wood block mb-1 text-sm">Deneme ve Tanışma Seansı</strong>
-              <p class="text-xs text-[#333333]/75 leading-relaxed">Çocukla ilk buluşma, ortamı ve enstrümanları keşif.</p>
-            </div>
-          </div>
-          <div class="bg-[#EDE6D9]/40 p-4 rounded-xl border border-[#6F5950]/10 flex flex-col justify-between">
-            <span class="text-terracotta font-display font-bold text-sm mb-1">Adım 02</span>
-            <div>
-              <strong class="text-wood block mb-1 text-sm">Çocuğa Özel Değerlendirme</strong>
-              <p class="text-xs text-[#333333]/75 leading-relaxed">Çocuğun tepkileri, enstrüman ilgileri ve odak süresinin gözlemlenmesi.</p>
-            </div>
-          </div>
-          <div class="bg-[#EDE6D9]/40 p-4 rounded-xl border border-[#6F5950]/10 flex flex-col justify-between">
-            <span class="text-terracotta font-display font-bold text-sm mb-1">Adım 03</span>
-            <div>
-              <strong class="text-wood block mb-1 text-sm">Çocuğa Özel Program</strong>
-              <p class="text-xs text-[#333333]/75 leading-relaxed">Çocuğun dünyasına ve seçtiği enstrümanlara en uygun akışın tasarlanması.</p>
-            </div>
-          </div>
-          <div class="bg-[#EDE6D9]/40 p-4 rounded-xl border border-[#6F5950]/10 flex flex-col justify-between">
-            <span class="text-terracotta font-display font-bold text-sm mb-1">Adım 04</span>
-            <div>
-              <strong class="text-wood block mb-1 text-sm">Seanslar</strong>
-              <p class="text-xs text-[#333333]/75 leading-relaxed">Birebir, neşeli ve sürdürülebilir müzik yolculuğunun hayata geçirilmesi.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <div class="mt-12 text-center bg-[#EDE6D9] p-8 rounded-2xl border border-[#6F5950]/15">
-      <p class="text-[#333333]/80 text-base md:text-lg mb-4">Aklınızdaki sorunun cevabını bulamadıysanız bize ulaşın.</p>
-      <a href="#connect" class="btn-primary inline-block bg-terracotta text-white px-8 py-3 rounded-full text-sm tracking-wide">Tanışma Görüşmesi Planlayalım</a>
+    <div class="mt-12 text-center bg-paper-deep p-8 border border-hair">
+      <p class="text-base md:text-lg mb-4" style="color:var(--ink-soft)">Aklınızdaki sorunun cevabını bulamadıysanız, doğrudan bize ulaşabilirsiniz.</p>
+      <a href="#connect" class="btn-outline inline-block font-mono text-xs tracking-wide px-8 py-3 uppercase">Görüşme Talebi Bırakın</a>
     </div>
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
-</svg>
-
 <!-- ===================== TESTIMONIALS (YORUMLAR SLIDER) ===================== -->
-<section id="testimonials" class="py-20 md:py-28 px-6 md:px-10">
+<section id="testimonials" class="py-20 md:py-28 px-6 md:px-10 bg-paper-deep">
   <div class="max-w-7xl mx-auto">
     <div class="text-center max-w-2xl mx-auto mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">Veli Gözünden</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333]">Ailelerin deneyimleri</h2>
+      <p class="eyebrow mb-5">Veli Gözünden</p>
+      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight" style="color:var(--ink)">Ailelerin Deneyimleri</h2>
     </div>
 
     <div class="max-w-6xl mx-auto relative">
-      <!-- Slider Wrapper -->
       <div class="overflow-hidden px-2">
         <div id="testimonialSlider" class="flex transition-transform duration-500 ease-out gap-6">
-          
-          <!-- Kart 1 -->
-          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
-            <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
-              &ldquo;3 yaşında kızımın kreşte yaşadığı bir olumsuzluktan dolayı ruhuna iyi gelmesi için Volkan Bey'lə çalışmıştık. Kızım üzerinde çok olumlu yansımaları oldu. Volkan Bey'in seanstan sonraki yorumları bu süreçte bize çok yardımcı oldu. Kızımızı mükemmel analiz etti. Olumsuz durum çok şükür geçti ama biz hala devam etmeye niyetliyiz. Tavsiye ederim.&rdquo;
+
+          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
+            <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
+              &ldquo;3 yaşında kızımın kreşte yaşadığı bir olumsuzluktan dolayı ruhuna iyi gelmesi için Volkan Bey'le çalışmıştık. Kızım üzerinde çok olumlu yansımaları oldu. Volkan Bey'in seanstan sonraki yorumları bu süreçte bize çok yardımcı oldu. Kızımızı mükemmel analiz etti. Olumsuz durum çok şükür geçti ama biz hala devam etmeye niyetliyiz. Tavsiye ederim.&rdquo;
             </p>
-            <p class="text-sm font-medium text-wood">&mdash; Melike K. (3 Yaşında Kız Çocuk Annesi)</p>
+            <p class="font-mono text-xs" style="color:var(--brass-deep)">MELİKE K. — 3 Yaşında Kız Çocuk Annesi</p>
           </div>
 
-          <!-- Kart 2 -->
-          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
-            <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
+          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
+            <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
               &ldquo;Oğlumun terapi sürecini destekleyecek, kendini özgürce ifade edebileceği bir alan ararken Volkan Bey ile yollarımız kesişti. Bizi bu süreçte en çok güvende hissettiren şey; Volkan Bey'in sadece müzik ve ses seanslarını yürütmekle kalmayıp, sürecin başından itibaren çocuğumuzun psikoloğuyla düzenli iletişim halinde kalarak her seanstan sonra ortak değerlendirmeler yapması oldu. Çok teşekkür ederiz.&rdquo;
             </p>
-            <p class="text-sm font-medium text-wood">&mdash; Nevin B. (7 Yaşında Erkek Çocuk Annesi)</p>
+            <p class="font-mono text-xs" style="color:var(--brass-deep)">NEVİN B. — 7 Yaşında Erkek Çocuk Annesi</p>
           </div>
 
-          <!-- Kart 3 -->
-          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
-            <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
+          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
+            <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
               &ldquo;Volkan Bey'in seanslarında çocuklar için kurduğu rahat ve baskıdan uzak ortamı çok sevdik. Kızım ilk başta biraz çekingen davranmıştı ancak müzik aletleriyle kendi hızında tanışmasına izin verilmesi süreci çok kolaylaştırdı. Evde de benzer şekilde seslerle oynamaya, kendi ritimlerini bulmaya başladı.&rdquo;
             </p>
-            <p class="text-sm font-medium text-wood">&mdash; Canan D. (6 Yaşında Kız Çocuk Annesi)</p>
+            <p class="font-mono text-xs" style="color:var(--brass-deep)">CANAN D. — 6 Yaşında Kız Çocuk Annesi</p>
           </div>
 
-          <!-- Kart 4 -->
-          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-white p-8 rounded-2xl border border-[#6F5950]/10 flex flex-col justify-between shadow-sm">
-            <p class="text-[#333333]/80 italic text-base leading-relaxed mb-6">
-              &ldquo;Hocamızın çocuklarla kurduğu sabırlı ve acele etmeyen iletişim biçimini kızımıza çok iyi geldi. Kızım kendi hızında ilerleyebildiği için seanslara rahat katılıyor; evde de sesler ve ritimlerle oynaması için keyifli bir alan oluştu.&rdquo;
+          <div class="w-full md:w-[calc(50%-12px)] shrink-0 bg-[#F3EEE1] p-8 border border-hair flex flex-col justify-between">
+            <p class="italic text-base leading-relaxed mb-6 font-display" style="color:var(--ink)">
+              &ldquo;Hocamızın çocuklarla kurduğu sabırlı ve acele etmeyen iletişim biçimi kızımıza çok iyi geldi. Kızım kendi hızında ilerleyebildiği için seanslara rahat katılıyor; evde de sesler ve ritimlerle oynaması için keyifli bir alan oluştu.&rdquo;
             </p>
-            <p class="text-sm font-medium text-wood">&mdash; Zeynep A. (8 Yaşında Kız Çocuk Annasi)</p>
+            <p class="font-mono text-xs" style="color:var(--brass-deep)">ZEYNEP A. — 8 Yaşında Kız Çocuk Annesi</p>
           </div>
 
         </div>
       </div>
 
-      <!-- Slider Kontrol Düğmeleri -->
       <div class="flex items-center justify-center gap-4 mt-8">
-        <button id="prevTestimonial" aria-label="Önceki Yorumlar" class="bg-white hover:bg-terracotta hover:text-white text-wood border border-[#6F5950]/20 w-11 h-11 rounded-full flex items-center justify-center transition-all shadow-sm">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        <button id="prevTestimonial" aria-label="Önceki Yorumlar" class="border border-hair hover:border-[var(--brass)] w-11 h-11 rounded-full flex items-center justify-center transition-all" style="color:var(--ink)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
-        <button id="nextTestimonial" aria-label="Sonraki Yorumlar" class="bg-white hover:bg-terracotta hover:text-white text-wood border border-[#6F5950]/20 w-11 h-11 rounded-full flex items-center justify-center transition-all shadow-sm">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        <button id="nextTestimonial" aria-label="Sonraki Yorumlar" class="border border-hair hover:border-[var(--brass)] w-11 h-11 rounded-full flex items-center justify-center transition-all" style="color:var(--ink)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
         </button>
       </div>
-
     </div>
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,-10 300,70 450,30 C600,-10 750,70 900,30 C1000,5 1100,55 1200,30"/>
-</svg>
-
-<!-- ===================== ABOUT (EĞİTİM VE HİKAYEMİZ) ===================== -->
-<section id="about" class="py-20 md:py-28 px-6 md:px-10 bg-[#EDE6D9]/50">
+<!-- ===================== YOLCULUĞUM (DARK — TECRÜBE) ===================== -->
+<section id="about" class="py-20 md:py-28 px-6 md:px-10 bg-forest">
   <div class="max-w-7xl mx-auto">
-    <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5 text-center">Eğitim ve Hikayemiz</p>
-    <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-12 text-center">Eğitim, Tecrübe ve Yolculuk</h2>
+    <p class="eyebrow eyebrow-dark mb-5 text-center">Yolculuğum</p>
+    <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight text-ivory mb-12 text-center">Sesin İzinde: Eğitimim ve Deneyimim</h2>
 
-    <div class="bg-white p-8 md:p-12 rounded-3xl border border-[#6F5950]/10 shadow-sm mb-16 max-w-4xl mx-auto">
-      <p class="text-[#333333]/85 leading-relaxed text-base md:text-lg">
-        Sesle olan yolculuğum 2003 yılında Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'la yaptığım çalışmalarla başladı. Müziğe olan büyük aşkım, zamanla sesin fiziğini daha derinden öğrenmek istememle beni akustik alanında master yapmaya yönlendirdi. ODTÜ Makine Mühendisliği'nde attığım temelleri bu ses dünyasıyla birleştirirken; 2005-2006 yıllarında ODTÜ Adayı Çocuklara Yaz Kampı liderliğiyle ilk adımlarını atan çocuklarla çalışma tutkum da hiç eksilmedi. Yıllar içerisinde onlarca çocuk ve gence verdiğim birebir enstrüman seanslarıyla büyüyen bu yolculuk, bugün Seslerle Yolculuk çatısı altında hayat bulmaya devam ediyor.
+    <div class="border border-hair-dark p-8 md:p-12 mb-16 max-w-4xl mx-auto">
+      <p class="leading-relaxed text-base md:text-lg text-ivory-soft">
+        Sesle olan yolculuğum 2003 yılında Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'la yaptığım çalışmalarla başladı. Müziğe olan büyük aşkım, zamanla sesin fiziğini daha derinden öğrenmek istememle beni akustik alanında master yapmaya yönlendirdi. ODTÜ Makine Mühendisliği'nde attığım temelleri bu ses dünyasıyla birleştirirken; 2005-2006 yıllarında ODTÜ Adayı Çocuklara Yaz Kampı liderliğiyle ilk adımlarını atan çocuklarla çalışma tutkum da hiç eksilmedi. Yıllar içerisinde onlarca çocuk ve gence verdiğim birebir enstrüman seanslarıyla büyüyen bu yolculuk, bugün Müzikle Yolculuk çatısı altında hayat bulmaya devam ediyor.
       </p>
     </div>
 
-    <div class="mb-16">
-      <div class="max-w-4xl mx-auto relative rounded-3xl overflow-hidden shadow-xl aspect-[16/9] bg-[#EDE6D9]">
-        <div class="slider-container relative w-full h-full">
+    <div class="mb-4">
+      <div class="art-frame-dark max-w-4xl mx-auto">
+        <div class="slider-container relative w-full aspect-[16/9] overflow-hidden">
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-100 flex items-center justify-center">
-            <img src="images/child3.jpg" alt="Çocuk müzik deneyimi" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
+            <img src="images/child3.jpg" alt="Çocuk müzik deneyimi" loading="lazy" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
           <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0 flex items-center justify-center">
-            <img src="images/Jar_flute.jpg" alt="Kavanoz flüt ve akustik sesler" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
+            <img src="images/Jar_flute.jpg" alt="Kavanoz flüt ve akustik sesler" loading="lazy" class="w-full h-full object-cover cursor-zoom-in" onclick="openModal(this.src, this.alt)">
           </div>
         </div>
       </div>
@@ -556,78 +570,87 @@
   </div>
 </section>
 
-<svg class="wave-divider max-w-5xl mx-auto" viewBox="0 0 1200 60" preserveAspectRatio="none">
-  <path d="M0,30 C150,60 300,0 450,30 C600,60 750,0 900,30 C1000,50 1100,10 1200,30"/>
-</svg>
-
-<!-- ===================== CONNECT (İLETİŞİM & FORM) ===================== -->
+<!-- ===================== CONNECT (GÖRÜŞME TALEBİ) ===================== -->
 <section id="connect" class="py-20 md:py-28 px-6 md:px-10">
   <div class="max-w-4xl mx-auto">
-    <div class="text-center mb-16">
-      <p class="text-terracotta text-sm tracking-[0.2em] uppercase mb-5">İletişim & Başvuru</p>
-      <h2 class="font-display text-4xl md:text-[2.75rem] leading-tight text-[#333333] mb-6">Tanışma Görüşmesi ve Sorularınız İçin</h2>
-      <p class="text-[#333333]/70 text-base md:text-lg leading-relaxed max-w-xl mx-auto">
-        Çocuğunuzun müzik yolculuğuna ilk adımı atmak ya da aklınıza takılanları sormak için formu doldurarak hemen iletişime geçebilirsiniz.
+    <div class="text-center mb-14">
+      <p class="eyebrow mb-5">Görüşme Talebi</p>
+      <h2 class="font-display text-3xl md:text-[2.35rem] leading-tight mb-6" style="color:var(--ink)">Bir Sonraki Adım İçin</h2>
+      <p class="text-base md:text-lg leading-relaxed max-w-xl mx-auto" style="color:var(--ink-soft)">
+        Çocuğunuz için Müzikle Yolculuk'un uygun bir alan olup olmadığını birlikte değerlendirmek üzere kısa bir tanışma görüşmesi planlayabiliriz. Aşağıdaki formu doldurmanız yeterli; en kısa sürede size dönüş yapıyorum.
       </p>
     </div>
 
-    <div class="bg-white p-8 md:p-12 rounded-3xl border border-[#6F5950]/10 shadow-sm mb-12">
+    <div class="bg-[#F3EEE1] p-8 md:p-12 border border-hair mb-6">
       <form action="https://formsubmit.co/vsusuzer@gmail.com" method="POST" class="space-y-6">
-        <input type="hidden" name="_subject" value="Seslerle Yolculuk - Yeni Form Başvurusu!">
+        <input type="hidden" name="_subject" value="Müzikle Yolculuk - Yeni Görüşme Talebi">
         <input type="text" name="_honey" style="display:none">
 
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <label for="parentName" class="block text-xs uppercase tracking-wider text-wood font-semibold mb-2">Adınız Soyadınız</label>
-            <input type="text" id="parentName" name="Ad Soyad" required class="w-full px-4 py-3 rounded-xl border border-[#6F5950]/20 bg-[#F5F2ED]/50 text-[#333333] text-sm transition-all">
+            <label for="parentName" class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:var(--brass-deep)">Adınız Soyadınız</label>
+            <input type="text" id="parentName" name="Ad Soyad" required class="w-full px-4 py-3 border border-hair bg-[#E8E1D0]/60 text-sm" style="color:var(--ink)">
           </div>
           <div>
-            <label for="childAge" class="block text-xs uppercase tracking-wider text-wood font-semibold mb-2">Çocuğunuzun Yaşı</label>
-            <input type="text" id="childAge" name="Cocuk Yasi" placeholder="Örn: 5 yaş" class="w-full px-4 py-3 rounded-xl border border-[#6F5950]/20 bg-[#F5F2ED]/50 text-[#333333] text-sm transition-all">
+            <label for="childAge" class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:var(--brass-deep)">Çocuğunuzun Yaşı</label>
+            <input type="text" id="childAge" name="Cocuk Yasi" placeholder="Örn: 5 yaş" class="w-full px-4 py-3 border border-hair bg-[#E8E1D0]/60 text-sm" style="color:var(--ink)">
           </div>
         </div>
 
         <div class="grid md:grid-cols-2 gap-6">
           <div>
-            <label for="email" class="block text-xs uppercase tracking-wider text-wood font-semibold mb-2">E-posta Adresiniz</label>
-            <input type="email" id="email" name="E-posta" required class="w-full px-4 py-3 rounded-xl border border-[#6F5950]/20 bg-[#F5F2ED]/50 text-[#333333] text-sm transition-all">
+            <label for="email" class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:var(--brass-deep)">E-posta Adresiniz</label>
+            <input type="email" id="email" name="E-posta" required class="w-full px-4 py-3 border border-hair bg-[#E8E1D0]/60 text-sm" style="color:var(--ink)">
           </div>
           <div>
-            <label for="phone" class="block text-xs uppercase tracking-wider text-wood font-semibold mb-2">Telefon Numaranız</label>
-            <input type="tel" id="phone" name="Telefon" required class="w-full px-4 py-3 rounded-xl border border-[#6F5950]/20 bg-[#F5F2ED]/50 text-[#333333] text-sm transition-all">
+            <label for="phone" class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:var(--brass-deep)">Telefon Numaranız</label>
+            <input type="tel" id="phone" name="Telefon" required class="w-full px-4 py-3 border border-hair bg-[#E8E1D0]/60 text-sm" style="color:var(--ink)">
           </div>
         </div>
 
         <div>
-          <label for="inquiryType" class="block text-xs uppercase tracking-wider text-wood font-semibold mb-2">Görüşme Amacınız</label>
-          <select id="inquiryType" name="Gorusme Amaci" class="w-full px-4 py-3 rounded-xl border border-[#6F5950]/20 bg-[#F5F2ED]/50 text-[#333333] text-sm transition-all">
-            <option value="Tanisma ve Deneme Seansi Ayarlamak Istiyorum">Tanışma ve Deneme Seansı Ayarlamak İstiyorum</option>
+          <label for="inquiryType" class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:var(--brass-deep)">Görüşme Amacınız</label>
+          <select id="inquiryType" name="Gorusme Amaci" class="w-full px-4 py-3 border border-hair bg-[#E8E1D0]/60 text-sm" style="color:var(--ink)">
+            <option value="On Gorusme Talep Ediyorum">Ön Görüşme Talep Ediyorum</option>
             <option value="Aklimda Bir Soru Var / Bilgi Almak Istiyorum">Aklımda Bir Soru Var / Bilgi Almak İstiyorum</option>
           </select>
         </div>
 
         <div>
-          <label for="message" class="block text-xs uppercase tracking-wider text-wood font-semibold mb-2">Mesajınız veya Çocuğunuz Hakkında Paylaşmak İstedikleriniz</label>
-          <textarea id="message" name="Mesaj" rows="4" placeholder="Çocuğunuzun ilgileri, beklentileriniz ya da sormak istedikleriniz..." class="w-full px-4 py-3 rounded-xl border border-[#6F5950]/20 bg-[#F5F2ED]/50 text-[#333333] text-sm transition-all"></textarea>
+          <label for="message" class="block font-mono text-xs uppercase tracking-wider mb-2" style="color:var(--brass-deep)">Mesajınız veya Çocuğunuz Hakkında Paylaşmak İstedikleriniz</label>
+          <textarea id="message" name="Mesaj" rows="4" placeholder="Çocuğunuzun ilgileri, beklentileriniz ya da sormak istedikleriniz..." class="w-full px-4 py-3 border border-hair bg-[#E8E1D0]/60 text-sm" style="color:var(--ink)"></textarea>
         </div>
 
         <div class="text-center pt-4">
-          <button type="submit" class="btn-primary w-full md:w-auto bg-terracotta text-white px-10 py-3.5 rounded-full text-sm tracking-wide font-medium">Gönder ve İletişime Geç</button>
+          <button type="submit" class="btn-primary w-full md:w-auto font-mono text-xs tracking-wide px-10 py-3.5 uppercase">Görüşme Talebimi Gönderin</button>
         </div>
       </form>
     </div>
 
-    <!-- ===================== SOSYAL MEDYA & İLETİŞİM LİNKLERİ (EN AŞAĞI) ===================== -->
-    <div class="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-[#6F5950]/15">
-      <a href="https://www.instagram.com/volkan_susuzer/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-wood hover:text-terracotta transition-colors text-sm font-medium px-5 py-2.5 rounded-full bg-white border border-[#6F5950]/15 shadow-sm">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Instagram'da Takip Edin
+    <p class="font-mono text-xs text-center mb-12" style="color:var(--ink-faint)">
+      Not: Kontenjan sınırlı olduğu için başvurular değerlendirme sırasına göre yanıtlanır.
+    </p>
+
+    <div class="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-hair">
+      <a href="https://www.instagram.com/volkan_susuzer/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition-colors text-sm font-medium px-5 py-2.5 border border-hair" style="color:var(--ink)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg> Instagram'da Takip Edin
       </a>
-      <a href="https://wa.me/905348287595" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-wood hover:text-terracotta transition-colors text-sm font-medium px-5 py-2.5 rounded-full bg-white border border-[#6F5950]/15 shadow-sm">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp ile Mesaj Gönderin
+      <a href="https://wa.me/905348287595" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 transition-colors text-sm font-medium px-5 py-2.5 border border-hair" style="color:var(--ink)">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> WhatsApp ile Mesaj Gönderin
       </a>
     </div>
   </div>
 </section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="bg-forest-deep py-10 px-6 md:px-10">
+  <div class="max-w-7xl mx-auto flex flex-col items-center gap-4">
+    <svg width="120" height="20" viewBox="0 0 240 20" aria-hidden="true">
+      <path d="M0,10 C20,2 40,18 60,10 C80,2 100,18 120,10 C140,2 160,18 180,10 C200,2 220,18 240,10" fill="none" stroke="#C9A768" stroke-width="1" opacity="0.5"/>
+    </svg>
+    <p class="font-mono text-xs" style="color:rgba(243,238,225,0.55)">Müzikle Yolculuk — Volkan Susüzer</p>
+  </div>
+</footer>
 
 <!-- ===================== JAVASCRIPT ===================== -->
 <script>
@@ -635,11 +658,11 @@
   const modalHtml = `
   <div id="imageModal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/85 backdrop-blur-sm transition-opacity duration-300 opacity-0">
       <div class="relative max-w-5xl w-full mx-6 flex flex-col items-center">
-          <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-terracotta transition-colors" aria-label="Kapat">
-              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          <button onclick="closeModal()" class="absolute -top-12 right-0 text-white hover:text-[#A47F3E] transition-colors" aria-label="Kapat">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
-          <img id="modalImg" src="" alt="" class="max-h-[85vh] object-contain rounded-xl shadow-2xl">
-          <p id="modalCaption" class="text-white/90 mt-5 text-lg font-medium font-display tracking-wide"></p>
+          <img id="modalImg" src="" alt="" class="max-h-[85vh] object-contain">
+          <p id="modalCaption" class="text-white/90 mt-5 text-lg font-medium tracking-wide" style="font-family:'Fraunces', serif; font-style:italic;"></p>
       </div>
   </div>
   `;
@@ -649,7 +672,6 @@
   const modalImg = document.getElementById('modalImg');
   const modalCaption = document.getElementById('modalCaption');
 
-  // Görseli Açma Fonksiyonu
   window.openModal = function(src, alt) {
       modalImg.src = src;
       modalCaption.textContent = alt;
@@ -661,7 +683,6 @@
       }, 10);
   };
 
-  // Görseli Kapatma Fonksiyonu
   window.closeModal = function() {
       imageModal.classList.remove('opacity-100');
       imageModal.classList.add('opacity-0');
@@ -673,52 +694,28 @@
 
   // 2. ARKA PLAN MÜZİK KONTROLÜ
   const bgMusic = document.getElementById('bgMusic');
-  const musicToggleBtn = document.getElementById('musicToggleBtn');
   const musicIcon = document.getElementById('musicIcon');
 
-  function toggleMusic() {
+  const ICON_PLAYING = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
+  const ICON_MUTED = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>`;
+
+  function toggleMusic(event) {
+      if(event) event.stopPropagation();
+      if (!bgMusic) return;
+
       if (bgMusic.paused) {
+          bgMusic.volume = 0.4;
           bgMusic.play().then(() => {
-              if(musicIcon) {
-                  musicIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
-              }
-          }).catch(e => console.log("Otomatik oynatma tarayıcı tarafından engellendi:", e));
+              if (musicIcon) musicIcon.innerHTML = ICON_PLAYING;
+              document.querySelectorAll('#musicToggleBtn, [onclick^="toggleMusic"]').forEach(btn => btn.setAttribute('aria-pressed', 'true'));
+          }).catch(e => console.log("Müzik başlatılamadı:", e));
       } else {
           bgMusic.pause();
-          if(musicIcon) {
-              musicIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line>`;
-          }
+          if (musicIcon) musicIcon.innerHTML = ICON_MUTED;
+          document.querySelectorAll('#musicToggleBtn, [onclick^="toggleMusic"]').forEach(btn => btn.setAttribute('aria-pressed', 'false'));
       }
   }
-
-  // Sayfa yüklenir yüklenmez müziği başlatmayı deneme ve tarayıcı izin vermediyse ilk etkileşimde tetikleme
-  window.addEventListener('load', () => {
-      if(bgMusic) {
-          bgMusic.volume = 0.4; // Hafif bir ses seviyesi
-          
-          // Doğrudan başlatmayı dene
-          bgMusic.play().then(() => {
-              if(musicIcon) {
-                  musicIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
-              }
-          }).catch(() => {
-              // Tarayıcı ilk otomatik oynatmaya izin vermezse, kullanıcı ekranda herhangi bir yere dokunduğu/tıkladığı anda müziği başlat
-              const startAudioOnInteract = () => {
-                  bgMusic.play().then(() => {
-                      if(musicIcon) {
-                          musicIcon.innerHTML = `<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>`;
-                      }
-                  }).catch(() => {});
-                  window.removeEventListener('click', startAudioOnInteract);
-                  window.removeEventListener('scroll', startAudioOnInteract);
-                  window.removeEventListener('touchstart', startAudioOnInteract);
-              };
-              window.addEventListener('click', startAudioOnInteract);
-              window.addEventListener('scroll', startAudioOnInteract);
-              window.addEventListener('touchstart', startAudioOnInteract);
-          });
-      }
-  });
+  window.toggleMusic = toggleMusic;
 
   document.addEventListener('DOMContentLoaded', () => {
       // 3. MOBİL MENÜ KONTROLÜ
@@ -733,19 +730,19 @@
           });
       }
 
-      // 4. HİKAYEMİZ BÖLÜMÜNDEKİ SLIDER (Fotoğraf Geçişi)
+      // 4. HİKAYEMİZ BÖLÜMÜNDEKİ SLIDER
       const slides = document.querySelectorAll('.slide');
       if(slides.length > 0) {
           let currentSlide = 0;
           setInterval(() => {
               slides[currentSlide].classList.remove('opacity-100');
               slides[currentSlide].classList.add('opacity-0');
-              
+
               currentSlide = (currentSlide + 1) % slides.length;
-              
+
               slides[currentSlide].classList.remove('opacity-0');
               slides[currentSlide].classList.add('opacity-100');
-          }, 4000); // 4 saniyede bir değiştir
+          }, 4000);
       }
 
       // 5. VELİ YORUMLARI SLIDER KONTROLÜ
@@ -757,7 +754,6 @@
           let currentIndex = 0;
           const totalItems = testimonialSlider.children.length;
 
-          // Ekranda kaç kart görüneceğini hesapla (mobilde 1, masaüstünde 2)
           function getItemsPerView() {
               return window.innerWidth >= 768 ? 2 : 1;
           }
@@ -766,7 +762,7 @@
               const itemsPerView = getItemsPerView();
               const maxIndex = Math.max(0, totalItems - itemsPerView);
               if (currentIndex > maxIndex) currentIndex = maxIndex;
-              
+
               const offset = currentIndex * (100 / itemsPerView);
               testimonialSlider.style.transform = `translateX(-${offset}%)`;
           }
@@ -777,7 +773,7 @@
               if (currentIndex < maxIndex) {
                   currentIndex++;
               } else {
-                  currentIndex = 0; // Başa dön
+                  currentIndex = 0;
               }
               updateSlider();
           });
@@ -788,7 +784,7 @@
               if (currentIndex > 0) {
                   currentIndex--;
               } else {
-                  currentIndex = maxIndex; // Sona git
+                  currentIndex = maxIndex;
               }
               updateSlider();
           });
