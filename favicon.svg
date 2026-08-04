@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-116 -116 232 131" width="232" height="131" role="img" aria-label="Müzikle Yolculuk">
+  <mask id="fav-holes">
+    <rect x="-116" y="-116" width="232" height="131" fill="#fff"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(180)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(198)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(216)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(234)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(252)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(270)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(288)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(306)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(324)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(342)"/>
+    <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(360)"/>
+  </mask>
+  <g mask="url(#fav-holes)">
+  <polygon points="45,-5 88,-11 88,11 45,5" fill="#221E18" transform="rotate(180)"/>
+  <polygon points="45,-5 90,-11 90,11 45,5" fill="#221E18" transform="rotate(198)"/>
+  <polygon points="45,-5 93,-11 93,11 45,5" fill="#221E18" transform="rotate(216)"/>
+  <polygon points="45,-5 95,-11 95,11 45,5" fill="#221E18" transform="rotate(234)"/>
+  <polygon points="45,-5 98,-11 98,11 45,5" fill="#221E18" transform="rotate(252)"/>
+  <polygon points="45,-5 100,-11 100,11 45,5" fill="#A47F3E" transform="rotate(270)"/>
+  <polygon points="45,-5 102,-11 102,11 45,5" fill="#221E18" transform="rotate(288)"/>
+  <polygon points="45,-5 105,-11 105,11 45,5" fill="#221E18" transform="rotate(306)"/>
+  <polygon points="45,-5 107,-11 107,11 45,5" fill="#221E18" transform="rotate(324)"/>
+  <polygon points="45,-5 110,-11 110,11 45,5" fill="#221E18" transform="rotate(342)"/>
+  <polygon points="45,-5 112,-11 112,11 45,5" fill="#221E18" transform="rotate(360)"/>
+  </g>
+</svg>
