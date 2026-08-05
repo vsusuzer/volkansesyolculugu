@@ -8,9 +8,40 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Müzikle Yolculuk — Adana">
 <meta property="og:description" content="Adana'da handpan, arp, flüt, gitar, kalimba, ukulele ve ksilofonla; çocuğunuzun kendi temposunda ilerlediği, birebir bir müzik yolculuğu.">
-<meta property="og:image" content="images/handpan_deniz.jpg">
+<meta property="og:image" content="https://muzikleyolculuk.com/images/handpan_deniz.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://muzikleyolculuk.com/">
+<meta property="og:locale" content="tr_TR">
+<meta property="og:site_name" content="Müzikle Yolculuk">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Müzikle Yolculuk — Adana">
+<meta name="twitter:description" content="Adana'da 4–12 yaş çocuklar için birebir, oyun temelli müzik seansları.">
+<meta name="twitter:image" content="https://muzikleyolculuk.com/images/handpan_deniz.jpg">
+<link rel="canonical" href="https://muzikleyolculuk.com/">
 <meta name="theme-color" content="#E8E1D0">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Müzikle Yolculuk",
+  "description": "Adana'da 4–12 yaş çocuklar için birebir, oyun temelli müzik seansları.",
+  "url": "https://muzikleyolculuk.com/",
+  "image": "https://muzikleyolculuk.com/images/handpan_deniz.jpg",
+  "logo": "https://muzikleyolculuk.com/logo.svg",
+  "telephone": "+905348287595",
+  "priceRange": "$$$",
+  "founder": { "@type": "Person", "name": "Volkan Susüzer" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Adana", "addressCountry": "TR" },
+  "areaServed": [
+    { "@type": "Place", "name": "Seyhan, Adana" },
+    { "@type": "Place", "name": "Çukurova, Adana" }
+  ],
+  "sameAs": ["https://www.instagram.com/volkan_susuzer/"]
+}
+</script>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +72,54 @@
     font-weight:300;
   }
   .font-display{font-family:'Fraunces', serif; font-optical-sizing:auto;}
+
+  /* ==================== MOBİL ÖNCELİKLİ AYARLAR ==================== */
+  html{ -webkit-text-size-adjust:100%; }
+  body{ overflow-x:hidden; -webkit-tap-highlight-color:transparent; }
+
+  /* Menüden bir bölüme atlarken başlık çubuğunun altında kalmasın */
+  section[id], footer[id]{ scroll-margin-top:128px; }
+
+  /* iOS'ta form alanına dokununca sayfanın kendiliğinden yakınlaşmasını
+     önler; 16px altındaki yazı boyutları bu davranışı tetikliyor. */
+  @media (max-width:767px){
+    input, select, textarea{ font-size:16px; }
+  }
+
+  /* Dokunma hedefleri parmak için yeterli büyüklükte olsun */
+  @media (max-width:767px){
+    nav button, nav a[aria-label]{ min-width:44px; min-height:44px; }
+  }
+
+  /* Dar ekranlarda uzun Türkçe başlıklar sayfayı boğmasın */
+  @media (max-width:480px){
+    h1.font-display{ font-size:2.05rem; line-height:1.18; }
+    h2.font-display{ font-size:1.7rem; line-height:1.22; }
+    h3.font-display{ font-size:1.05rem; }
+  }
+
+  /* Ana eylem butonu telefonda tam genişlik — kaçırılması zor olsun */
+  @media (max-width:480px){
+    .btn-primary{ width:100%; justify-content:center; text-align:center; }
+  }
+
+  /* Telefonda bölüm araları biraz daha nefes alsın */
+  @media (max-width:480px){
+    section{ padding-left:1.25rem; padding-right:1.25rem; }
+  }
+  /* =================== MOBİL AYARLARIN SONU =================== */
   .font-mono{font-family:'IBM Plex Mono', monospace;}
   
-  /* Tüm paragrafları iki yana yaslama */
+  /* Paragraflar: telefonda sola hizalı, geniş ekranda iki yana yaslı.
+     Dar kolonda yaslama, kelime aralarını aşırı gerdirdiği için
+     mobilde kapalı tutuluyor. */
   p, li {
-    text-align: justify;
+    text-align: left;
+  }
+  @media (min-width: 768px) {
+    p, li {
+      text-align: justify;
+    }
   }
   /* Başlıklar ve butonlar yaslanmasın, sola/ortaya hizalı kalsın */
   h1, h2, h3, h4, h5, h6, .eyebrow, button, a.btn-primary, a.btn-outline, a.btn-outline-dark, .nav-link, .mobile-link {
@@ -150,6 +224,9 @@
     vertical-align:middle; position:relative; top:-1px;
   }
   .notice-bar .notice-date{color:var(--ivory-soft); margin-right:0.5rem;}
+  @media (max-width:400px){
+    .nav-mark{ height:24px !important; }
+  }
   @media (max-width:640px){ .notice-bar{font-size:0.6rem; letter-spacing:0.1em; padding:0.6rem 1rem;} }
 
   /* Sabit WhatsApp butonu */
@@ -184,7 +261,7 @@
 <header class="fixed top-0 left-0 right-0 z-50 bg-[#E8E1D0]/90 backdrop-blur-md border-b border-hair">
   <nav class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
     <a href="#hero" class="flex items-center gap-2.5 md:gap-3" style="color:var(--ink)" aria-label="Müzikle Yolculuk — ana sayfa">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-116 -116 232 131" height="30" style="height:30px;width:auto;flex-shrink:0" role="img" aria-label="Müzikle Yolculuk">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="-116 -116 232 131" height="30" class="nav-mark" style="height:30px;width:auto;flex-shrink:0" role="img" aria-label="Müzikle Yolculuk">
         <mask id="navlogo-holes">
           <rect x="-116" y="-116" width="232" height="131" fill="#fff"/>
           <circle cx="70" cy="0" r="4.5" fill="#000" transform="rotate(180)"/>
@@ -273,7 +350,7 @@
        ekle ya da bu bloğu yorum içine al.
        ============================================================ -->
   <a href="#connect" class="notice-bar">
-    <span class="dot" aria-hidden="true"></span><span class="notice-date">Ağustos 2026</span>Sonbahar dönemi için 2 kontenjan açık
+    <span class="dot" aria-hidden="true"></span><span class="notice-date">Ağustos 2026</span>Sonbahar dönemi başvuruları başladı
   </a>
 </header>
 
@@ -451,10 +528,6 @@
     <div class="art-frame max-w-4xl mx-auto mb-8 md:mb-12">
       <div class="relative overflow-hidden group">
         <img src="images/instruments_discovery.jpg" alt="Handpan, yan flüt, kalimba, gitar, ukulele, ksilofon ve arp enstrümanları" loading="lazy" class="w-full h-auto object-cover cursor-zoom-in transition-transform duration-700 group-hover:scale-[1.03]" onclick="openModal(this.src, this.alt)">
-        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-[#221E18]/85 via-[#221E18]/35 to-transparent p-6 md:p-8 flex flex-col justify-end">
-          <p class="text-ivory font-display italic text-lg md:text-xl mb-1">Müziğin Zengin Tonları</p>
-          <p class="text-ivory-soft text-xs md:text-sm">Her biri farklı bir ses dokusu taşıyan bu enstrümanlarla çocuğunuzun doğasına en uygun sesi birlikte keşfediyoruz.</p>
-        </div>
       </div>
     </div>
 
@@ -722,8 +795,13 @@
     </div>
 
     <div class="bg-[#F3EEE1] p-8 md:p-12 border border-hair mb-6">
-      <form action="https://formsubmit.co/vsusuzer@gmail.com" method="POST" class="space-y-6">
+      <!-- FormSubmit uç noktası. Buradaki dize e-posta adresinin
+           yerini tutar; gerçek adres sayfa kaynağında görünmez. -->
+      <form action="https://formsubmit.co/f5e7049353ab2f4d40fa28ef4d3181f1" method="POST" class="space-y-6">
         <input type="hidden" name="_subject" value="Müzikle Yolculuk - Yeni Görüşme Talebi">
+        <input type="hidden" name="_next" value="https://muzikleyolculuk.com/tesekkurler.html">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
         <input type="text" name="_honey" style="display:none">
 
         <div class="grid md:grid-cols-2 gap-6">
@@ -963,6 +1041,17 @@
     };
     toggleWa();
     window.addEventListener('scroll', toggleWa, {passive:true});
+
+    // İletişim formu ekrandayken sabit butonu gizle — telefonda
+    // gönder butonunun üstüne binmesin.
+    const connect = document.getElementById('connect');
+    if(connect && 'IntersectionObserver' in window){
+      new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          wa.style.display = e.isIntersecting ? 'none' : '';
+        });
+      }, {threshold:0.15}).observe(connect);
+    }
   })();
 
   // 6. DIŞARI TIKLAMA İLE MENÜ ve MODAL KAPATMA
