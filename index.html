@@ -105,21 +105,28 @@
 
   /* Telefonda bölüm araları biraz daha nefes alsın */
   @media (max-width:480px){
-    section{ padding-left:1.25rem; padding-right:1.25rem; }
+    section{ padding-left:1.15rem; padding-right:1.15rem; }
+  }
+  /* Tanıtım bloğundaki dikey çizgi telefonda kolonu daraltmasın:
+     mobilde üstte yatay bir çizgiye dönüşür. */
+  .intro-rule{ border-top:1px solid var(--hair); padding-top:1.75rem; }
+  @media (min-width:768px){
+    .intro-rule{ border-top:0; padding-top:0; }
   }
   /* =================== MOBİL AYARLARIN SONU =================== */
   .font-mono{font-family:'IBM Plex Mono', monospace;}
   
-  /* Paragraflar: telefonda sola hizalı, geniş ekranda iki yana yaslı.
-     Dar kolonda yaslama, kelime aralarını aşırı gerdirdiği için
-     mobilde kapalı tutuluyor. */
+  /* Paragraflar iki yana yaslı + heceleme açık.
+     Heceleme, uzun Türkçe kelimeleri hecesinden bölerek hem dar
+     kolondaki kocaman kelime boşluklarını hem de tırtıklı sağ kenarı
+     ortadan kaldırır. html lang="tr" olduğu için tarayıcı Türkçe
+     heceleme sözlüğünü kullanır. */
   p, li {
-    text-align: left;
-  }
-  @media (min-width: 768px) {
-    p, li {
-      text-align: justify;
-    }
+    text-align: justify;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+    hyphenate-limit-chars: 8 4 4;
+    text-wrap: pretty;
   }
   /* Başlıklar ve butonlar yaslanmasın, sola/ortaya hizalı kalsın */
   h1, h2, h3, h4, h5, h6, .eyebrow, button, a.btn-primary, a.btn-outline, a.btn-outline-dark, .nav-link, .mobile-link {
@@ -398,11 +405,11 @@
 
 <!-- ===================== KİMLE ÇALIŞACAKSINIZ (KISA TANITIM) ===================== -->
 <section id="intro" class="pb-14 md:pb-24 px-6 md:px-10">
-  <div class="max-w-3xl mx-auto border-l pl-6 md:pl-10" style="border-color:var(--hair)">
+  <div class="max-w-3xl mx-auto intro-rule md:border-l md:pl-10" style="border-color:var(--hair)">
     <p class="eyebrow mb-4">Kimle Çalışacaksınız</p>
     <h2 class="font-display text-2xl md:text-[2rem] leading-tight mb-5" style="color:var(--ink)">Ben Volkan Susüzer</h2>
     <p class="text-base md:text-lg leading-relaxed mb-6" style="color:var(--ink-soft)">
-      Sesle yolculuğum 2003'te Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'la başladı. ODTÜ Makine Mühendisliği'nin ardından, sesin fiziğini daha derinden öğrenmek için akustik alanında master yaptım. Yirmi yılı aşkın süredir çocuklarla birebir çalışıyorum — bugün Adana'da, aynı dönemde yalnızca birkaç aileyle.
+      Sesle yolculuğum 2003'te Cumhurbaşkanlığı Senfoni Orkestrası Şef Flütçüsü Aycan Sancar'la başladı. ODTÜ Makine Mühendisliği'nin ardından, sesin fiziğini daha derinden öğrenmek için akustik alanında master yaptım. Yirmi yılı aşkın süredir çocuklarla birebir çalışıyorum — bugün Adana'da, aynı dönemde yalnızca birkaç aileyle...
     </p>
     <a href="#about" class="text-sm tracking-wide border-b pb-1 transition-colors" style="color:var(--ink); border-color:var(--ink-faint)">Yolculuğumun tamamını okuyun &rarr;</a>
   </div>
